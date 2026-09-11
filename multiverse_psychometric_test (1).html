@@ -1,0 +1,2306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HERO OR OUTLAW? The 50-Character Multiverse Psychometric Test</title>
+
+  <!-- Google Fonts: Bangers & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            comic: ['"Bangers"', 'cursive', 'sans-serif'],
+            sans: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            comicYellow: '#FFE600',
+            comicPink: '#FF0055',
+            comicCyan: '#00F0FF',
+            comicGreen: '#00FF66',
+            comicOrange: '#FF6B00',
+            comicPurple: '#A020F0',
+            comicDark: '#0A0A0A',
+            comicCream: '#FFFDF5',
+          },
+          boxShadow: {
+            'brutal-xs': '2px 2px 0px #000',
+            'brutal-sm': '3px 3px 0px #000',
+            'brutal': '5px 5px 0px #000',
+            'brutal-lg': '8px 8px 0px #000',
+            'brutal-xl': '12px 12px 0px #000',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Neo-Brutalist Ben-Day Dot Pattern */
+    body {
+      background-color: #FFFDF5;
+      background-image: radial-gradient(#000000 1.5px, transparent 1.5px);
+      background-size: 16px 16px;
+      color: #0A0A0A;
+      font-family: 'Space Grotesk', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Comic Headings */
+    .comic-stroke {
+      -webkit-text-stroke: 1.5px #000;
+      text-shadow: 4px 4px 0px #000;
+    }
+
+    /* Neo-Brutalist Component Rules */
+    .brutal-card {
+      border: 3.5px solid #000;
+      box-shadow: 6px 6px 0px #000;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .brutal-btn {
+      border: 3.5px solid #000;
+      box-shadow: 5px 5px 0px #000;
+      transition: all 0.1s cubic-bezier(0.2, 0.8, 0.2, 1);
+      cursor: pointer;
+      user-select: none;
+    }
+    .brutal-btn:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 7px 7px 0px #000;
+    }
+    .brutal-btn:active {
+      transform: translate(3px, 3px);
+      box-shadow: 2px 2px 0px #000;
+    }
+
+    /* Starburst Sticker Shapes */
+    .burst-badge {
+      clip-path: polygon(
+        50% 0%, 65% 15%, 85% 5%, 85% 25%, 100% 35%, 88% 50%,
+        100% 65%, 85% 75%, 85% 95%, 65% 85%, 50% 100%, 35% 85%,
+        15% 95%, 15% 75%, 0% 65%, 12% 50%, 0% 35%, 15% 25%, 15% 5%, 35% 15%
+      );
+    }
+
+    /* Comic Speech Balloon */
+    .comic-balloon {
+      position: relative;
+      background: #ffffff;
+      border: 3.5px solid #000000;
+      border-radius: 14px;
+    }
+    .comic-balloon::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 32px;
+      border-width: 15px 15px 0;
+      border-style: solid;
+      border-color: #000000 transparent;
+      display: block;
+      width: 0;
+    }
+    .comic-balloon::before {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 35px;
+      border-width: 11px 11px 0;
+      border-style: solid;
+      border-color: #ffffff transparent;
+      display: block;
+      width: 0;
+      z-index: 1;
+    }
+
+    /* Continuous Marquee Banner */
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: 200%;
+      animation: marquee 20s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+
+    /* Custom Comic Scrollbars */
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FFE600;
+      border: 2px solid #000;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #FF0055;
+      border: 2px solid #000;
+    }
+
+    .tilt-left { transform: rotate(-2deg); }
+    .tilt-right { transform: rotate(2deg); }
+
+    /* Cartoon SVG Frame */
+    .cartoon-container {
+      background: #ffffff;
+      border: 3.5px solid #000;
+      box-shadow: 4px 4px 0px #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="selection:bg-comicYellow selection:text-black">
+
+  <header class="w-full bg-comicYellow border-b-4 border-black py-2 overflow-hidden shadow-brutal-sm font-comic tracking-wider text-xl uppercase font-bold select-none sticky top-0 z-40">
+    <div class="flex whitespace-nowrap animate-marquee">
+      <div class="flex items-center space-x-8 px-4">
+        <span>💥 50 CARTOON MULTIVERSE ICONS</span>
+        <span>⚡ 4 PSYCHOMETRIC AXES</span>
+        <span>🦸 PARAGON, STRATEGIST OR OUTLAW?</span>
+        <span>🎨 PURE HANDCRAFTED CARTOON SVGS</span>
+        <span>🔥 ZERO BROKEN PHOTOS</span>
+        <span>⚔️ WHO IS YOUR COMIC SOULMATE?</span>
+      </div>
+      <div class="flex items-center space-x-8 px-4">
+        <span>💥 50 CARTOON MULTIVERSE ICONS</span>
+        <span>⚡ 4 PSYCHOMETRIC AXES</span>
+        <span>🦸 PARAGON, STRATEGIST OR OUTLAW?</span>
+        <span>🎨 PURE HANDCRAFTED CARTOON SVGS</span>
+        <span>🔥 ZERO BROKEN PHOTOS</span>
+        <span>⚔️ WHO IS YOUR COMIC SOULMATE?</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Audio and Header Action Bar -->
+  <div class="max-w-6xl mx-auto px-4 pt-4 flex justify-between items-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1 bg-comicCyan border-2 border-black font-black text-xs uppercase tracking-wider rounded-lg shadow-brutal-xs">
+      <span>PSYCHE MATRIX 2.0</span>
+      <span class="w-2.5 h-2.5 rounded-full bg-comicPink animate-ping"></span>
+    </div>
+    <button id="sound-toggle-btn" class="brutal-btn bg-white px-3 py-1 text-xs font-black rounded-lg flex items-center gap-1.5" title="Toggle comic sound effects">
+      <span id="sound-icon">🔊</span>
+      <span id="sound-label">SFX: ON</span>
+    </button>
+  </div>
+
+  <main class="max-w-6xl mx-auto px-4 py-6 md:py-10">
+
+    <!-- Landing View -->
+    <section id="landing-view" class="space-y-8 block">
+      <div class="relative brutal-card bg-white p-6 md:p-10 rounded-2xl relative overflow-hidden">
+        <!-- Comic Burst Badges -->
+        <div class="absolute -right-6 -top-6 w-28 h-28 bg-comicPink border-4 border-black text-white font-comic text-2xl flex items-center justify-center burst-badge animate-pulse z-10 select-none">
+          POW!
+        </div>
+        <div class="absolute right-20 -bottom-3 hidden md:flex px-4 py-1 bg-comicGreen border-3 border-black font-comic text-xl tilt-right shadow-brutal-sm z-10">
+          50 CARTOONS LOADED!
+        </div>
+
+        <div class="space-y-4 max-w-4xl relative z-0">
+          <h1 class="font-comic text-5xl sm:text-7xl lg:text-8xl leading-none text-black tracking-wide">
+            HERO <span class="bg-comicYellow px-3 py-0.5 border-4 border-black inline-block tilt-left">OR</span> OUTLAW?
+          </h1>
+          <p class="text-xl md:text-2xl font-black font-sans uppercase tracking-tight text-neutral-900">
+            THE 50-CHARACTER SUPERHERO & ANIME PSYCHOMETRIC TEST
+          </p>
+
+          <p class="text-base md:text-lg font-medium text-neutral-700 leading-relaxed max-w-3xl pt-1">
+            Where do your moral instincts lie when reality shatters? Are you an incorruptible shield like 
+            <strong class="bg-comicGreen/40 px-1 border border-black">Superman</strong> & <strong class="bg-comicGreen/40 px-1 border border-black">Tanjiro</strong>, 
+            a calculating tactician like <strong class="bg-comicCyan/40 px-1 border border-black">Batman</strong> & <strong class="bg-comicCyan/40 px-1 border border-black">Levi</strong>, 
+            or a wild renegade like <strong class="bg-comicPink/40 px-1 border border-black">Luffy</strong> & <strong class="bg-comicPink/40 px-1 border border-black">Deadpool</strong>? 
+            Complete 8 high-stakes dilemmas to find your psychometric coordinates and cartoon soulmate!
+          </p>
+        </div>
+
+        <!-- Fast Avatar Strip -->
+        <div class="mt-8 pt-6 border-t-4 border-black">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-black uppercase tracking-wider bg-black text-white px-2.5 py-1 rounded shadow-brutal-xs">
+              ILLUSTRATED CARTOON CANDIDATES (50 ROSTER)
+            </span>
+            <span class="text-xs font-bold text-neutral-600 hidden sm:inline">100% Pure Crisp Vector Cartoon SVGs</span>
+          </div>
+          <div id="preview-avatar-strip" class="flex gap-3.5 overflow-x-auto pb-3 pt-1 select-none">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 items-center">
+          <button id="start-btn" class="w-full sm:w-auto brutal-btn bg-comicPink hover:bg-pink-600 text-white font-comic text-2xl md:text-3xl px-8 py-4 rounded-xl flex items-center justify-center gap-3">
+            <span>COMMENCE ASSESSMENT</span>
+            <span class="bg-black text-comicYellow px-2.5 py-0.5 rounded text-lg font-sans font-black">BAM!</span>
+          </button>
+          
+          <button id="open-roster-btn-hero" class="w-full sm:w-auto brutal-btn bg-white hover:bg-neutral-100 text-black font-bold text-lg px-6 py-4 rounded-xl flex items-center justify-center gap-2">
+            <span>BROWSE ALL 50 CARTOONS</span>
+            <span class="text-xl">📖</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Archetype Feature Banners -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="brutal-card bg-comicCyan p-5 rounded-xl tilt-left">
+          <div class="font-comic text-2xl">🛡️ PARAGONS</div>
+          <p class="text-sm font-semibold mt-1">Selfless beacons of honor who elevate mankind.</p>
+          <div class="mt-3 text-xs font-black uppercase tracking-wider bg-white px-2 py-1 border-2 border-black inline-block">
+            All Might • Cap • Superman
+          </div>
+        </div>
+        <div class="brutal-card bg-comicYellow p-5 rounded-xl">
+          <div class="font-comic text-2xl">♟️ ARCHITECTS</div>
+          <p class="text-sm font-semibold mt-1">Chessmasters who calculate outcomes ten moves ahead.</p>
+          <div class="mt-3 text-xs font-black uppercase tracking-wider bg-white px-2 py-1 border-2 border-black inline-block">
+            Batman • Erwin • Lelouch
+          </div>
+        </div>
+        <div class="brutal-card bg-comicOrange p-5 rounded-xl tilt-right text-white">
+          <div class="font-comic text-2xl">🔥 TRAILBLAZERS</div>
+          <p class="text-sm font-semibold mt-1 text-black">Instinctual storms who shatter destiny with will.</p>
+          <div class="mt-3 text-xs font-black uppercase tracking-wider bg-black text-comicYellow px-2 py-1 border-2 border-white inline-block">
+            Luffy • Goku • Kamina
+          </div>
+        </div>
+        <div class="brutal-card bg-comicPink p-5 rounded-xl text-white">
+          <div class="font-comic text-2xl">⚡ RENEGADES</div>
+          <p class="text-sm font-semibold mt-1 text-white">Pragmatic outlaws who tear down arbitrary rules.</p>
+          <div class="mt-3 text-xs font-black uppercase tracking-wider bg-white text-black px-2 py-1 border-2 border-black inline-block">
+            Deadpool • Guts • Wolverine
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Assessment View -->
+    <section id="quiz-view" class="space-y-6 hidden">
+      <!-- HUD / Progress Meter -->
+      <div class="brutal-card bg-white p-4 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <span class="font-comic text-2xl bg-comicYellow border-2 border-black px-3 py-1 rounded shadow-brutal-xs">
+            CRUCIBLE <span id="hud-question-number">1</span>/8
+          </span>
+          <span id="hud-axis-focus" class="text-xs font-black uppercase tracking-wider bg-black text-white px-3 py-1.5 rounded">
+            TACTICAL FOCUS
+          </span>
+        </div>
+
+        <!-- Power Gauge Bar -->
+        <div class="flex-1 max-w-md">
+          <div class="flex justify-between text-xs font-black uppercase mb-1">
+            <span>SYNCHRONIZATION GAUGE</span>
+            <span id="progress-percentage">12%</span>
+          </div>
+          <div class="w-full h-5 bg-neutral-200 border-3 border-black rounded-lg overflow-hidden relative">
+            <div id="progress-bar-fill" class="h-full bg-comicPink transition-all duration-300 border-r-2 border-black" style="width: 12.5%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comic Dilemma Card -->
+      <div class="brutal-card bg-white p-6 md:p-8 rounded-2xl relative">
+        <div class="absolute -right-3 -top-3 px-3 py-1 bg-comicGreen border-2 border-black font-comic text-lg tilt-right shadow-brutal-sm">
+          DECIDE YOUR PATH!
+        </div>
+
+        <div class="space-y-2 mb-6">
+          <span id="scenario-topic" class="text-xs font-black uppercase px-2.5 py-1 bg-comicCyan/40 border border-black rounded inline-block">
+            Scenario Topic
+          </span>
+          <h2 id="scenario-title" class="font-comic text-3xl md:text-4xl text-black tracking-wide leading-tight">
+            Scenario Headline
+          </h2>
+          <p id="scenario-narrative" class="text-base md:text-lg font-medium text-neutral-800 leading-relaxed pt-1">
+            Narrative prompt describing the moral and tactical crucible.
+          </p>
+        </div>
+
+        <!-- 4 Actionable Choices -->
+        <div id="choices-container" class="space-y-3.5">
+          <!-- Dynamic options populated here -->
+        </div>
+
+        <!-- Bottom Controls -->
+        <div class="mt-8 pt-5 border-t-3 border-black flex items-center justify-between">
+          <button id="prev-question-btn" class="brutal-btn bg-neutral-200 hover:bg-neutral-300 font-bold text-sm px-5 py-2.5 rounded-lg disabled:opacity-40 disabled:cursor-not-allowed">
+            ← PREVIOUS
+          </button>
+          <span class="text-xs font-bold text-neutral-500 hidden sm:inline">Trust your gut reaction. No moral hesitation.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Dossier View -->
+    <section id="results-view" class="space-y-8 hidden">
+      <!-- Winner Reveal Header -->
+      <div class="brutal-card bg-comicYellow p-6 md:p-8 rounded-2xl relative overflow-hidden">
+        <div class="absolute -right-4 -bottom-4 w-32 h-32 bg-comicPink/30 rounded-full border-4 border-black pointer-events-none"></div>
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 relative z-10">
+          <div>
+            <div class="inline-flex items-center gap-2 bg-black text-white px-3 py-1 font-comic text-lg uppercase rounded shadow-brutal-xs">
+              <span>🎯 PSYCHOMETRIC MATRIX ALIGNED</span>
+            </div>
+            <h2 class="font-comic text-4xl md:text-6xl text-black mt-2 leading-none">
+              YOUR PRIMARY CARTOON MATCH
+            </h2>
+          </div>
+          <div class="bg-white border-3 border-black p-3 rounded-xl shadow-brutal text-center flex-shrink-0">
+            <span class="block text-xs font-black uppercase text-neutral-600">RESONANCE</span>
+            <span id="match-percentage" class="font-comic text-5xl text-comicPink">98%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prime Match Neo-Brutalist Dossier Card -->
+      <div class="brutal-card bg-white rounded-2xl overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+          
+          <!-- Left Column: Cartoon Portrait & Identity -->
+          <div class="lg:col-span-5 p-6 md:p-8 bg-neutral-50 border-b-4 lg:border-b-0 lg:border-r-4 border-black flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap gap-2 items-center mb-4">
+                <span id="char-universe" class="px-3 py-1 bg-black text-comicYellow font-black text-xs uppercase tracking-wider rounded border border-black">
+                  DC COMICS
+                </span>
+                <span id="char-archetype" class="px-3 py-1 bg-comicCyan text-black font-black text-xs uppercase tracking-wider rounded border border-black shadow-brutal-xs">
+                  TACTICAL ARCHITECT
+                </span>
+              </div>
+
+              <!-- Cartoon Illustration Display Frame -->
+              <div class="cartoon-container rounded-xl h-72 sm:h-80 w-full mb-4 relative group" id="char-cartoon-frame">
+                <!-- SVG injected here -->
+                <div class="absolute bottom-2 right-2 px-2.5 py-1 bg-black text-comicYellow font-comic text-base border-2 border-comicYellow rounded shadow-brutal-xs">
+                  CARTOON DOSSIER
+                </div>
+              </div>
+
+              <h3 id="char-name" class="font-comic text-5xl md:text-6xl text-black leading-none mt-1">
+                BATMAN
+              </h3>
+              <p id="char-alias" class="text-sm font-bold text-neutral-600 uppercase tracking-wider mt-1">
+                Bruce Wayne • The Dark Knight
+              </p>
+
+              <!-- Signature Quote in Speech Bubble -->
+              <div class="comic-balloon p-4 shadow-brutal-xs mt-4">
+                <div class="font-comic text-xs text-neutral-400 mb-0.5 uppercase tracking-wider">SIGNATURE MOTTO:</div>
+                <p id="char-quote" class="font-bold text-base md:text-lg italic text-black leading-snug">
+                  "It's not who I am underneath, but what I do that defines me."
+                </p>
+              </div>
+            </div>
+
+            <!-- Archetype Coordinates Summary -->
+            <div class="bg-comicYellow/30 border-2 border-black p-4 rounded-xl mt-6">
+              <div class="text-xs font-black uppercase text-black">CORE TRAIT POLARITIES:</div>
+              <div id="char-trait-tags" class="flex flex-wrap gap-1.5 mt-2">
+                <!-- Badges populated dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Deep Psychological Breakdown -->
+          <div class="lg:col-span-7 p-6 md:p-8 space-y-6">
+            <div>
+              <h4 class="font-comic text-2xl md:text-3xl text-black flex items-center gap-2">
+                <span>🧠 PSYCHOLOGICAL SYNOPSIS</span>
+              </h4>
+              <p id="char-synopsis" class="text-base font-medium text-neutral-800 leading-relaxed mt-2">
+                Character detailed analysis.
+              </p>
+            </div>
+
+            <!-- Strengths vs Blindspots -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="bg-comicGreen/20 border-2 border-black p-4 rounded-xl">
+                <div class="font-comic text-xl text-black">⚡ TACTICAL STRENGTHS</div>
+                <p id="char-strengths" class="text-sm font-bold text-neutral-800 mt-1">
+                  Tactical preparedness, iron contingency planning.
+                </p>
+              </div>
+              <div class="bg-comicPink/20 border-2 border-black p-4 rounded-xl">
+                <div class="font-comic text-xl text-black">⚠️ FATAL BLINDSPOT</div>
+                <p id="char-blindspot" class="text-sm font-bold text-neutral-800 mt-1">
+                  Reluctance to trust allies; prone to isolation.
+                </p>
+              </div>
+            </div>
+
+            <!-- 4-Axis Meters -->
+            <div>
+              <h4 class="font-comic text-2xl text-black mb-3">YOUR 4-AXIS PSYCHOMETRIC POLARITY</h4>
+              <div class="space-y-3" id="axis-meters-container">
+                <!-- Meters rendered dynamically -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Secondary Matches: Allies / Foil -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 2nd Match -->
+        <div id="runnerup-1-card" class="brutal-card bg-white p-5 rounded-xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-black uppercase bg-comicCyan px-2 py-0.5 border border-black rounded shadow-brutal-xs">
+                CLOSEST ALLY (2ND MATCH)
+              </span>
+              <span id="runnerup-1-score" class="font-comic text-2xl text-comicPink">91%</span>
+            </div>
+            <div id="runnerup-1-frame" class="cartoon-container rounded-lg h-44 mb-3">
+              <!-- Cartoon SVG -->
+            </div>
+            <h4 id="runnerup-1-name" class="font-comic text-3xl leading-none">IRON MAN</h4>
+            <p id="runnerup-1-universe" class="text-xs font-bold text-neutral-500 uppercase mt-0.5">Marvel Comics</p>
+            <p id="runnerup-1-desc" class="text-sm text-neutral-700 font-medium mt-2">
+              Shared pragmatic genius and contingency mindset.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3rd Match -->
+        <div id="runnerup-2-card" class="brutal-card bg-white p-5 rounded-xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-black uppercase bg-comicGreen px-2 py-0.5 border border-black rounded shadow-brutal-xs">
+                SYMPATHETIC SPIRIT (3RD MATCH)
+              </span>
+              <span id="runnerup-2-score" class="font-comic text-2xl text-comicPink">88%</span>
+            </div>
+            <div id="runnerup-2-frame" class="cartoon-container rounded-lg h-44 mb-3">
+              <!-- Cartoon SVG -->
+            </div>
+            <h4 id="runnerup-2-name" class="font-comic text-3xl leading-none">LEVI ACKERMAN</h4>
+            <p id="runnerup-2-universe" class="text-xs font-bold text-neutral-500 uppercase mt-0.5">Attack on Titan</p>
+            <p id="runnerup-2-desc" class="text-sm text-neutral-700 font-medium mt-2">
+              Unyielding precision under catastrophic conditions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Diametric Foil / Nemesis -->
+        <div id="foil-card" class="brutal-card bg-comicDark text-white p-5 rounded-xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-black uppercase bg-comicPink text-white px-2 py-0.5 border border-white rounded shadow-brutal-xs">
+                DIAMETRIC FOIL (NEMESIS)
+              </span>
+              <span class="font-comic text-xl text-comicYellow">OPPOSITE</span>
+            </div>
+            <div id="foil-frame" class="cartoon-container rounded-lg h-44 mb-3 border-white bg-neutral-900">
+              <!-- Cartoon SVG -->
+            </div>
+            <h4 id="foil-name" class="font-comic text-3xl text-comicYellow leading-none">DENJI</h4>
+            <p id="foil-universe" class="text-xs font-bold text-neutral-400 uppercase mt-0.5">Chainsaw Man</p>
+            <p id="foil-desc" class="text-sm text-neutral-200 font-medium mt-2">
+              Pure chaotic impulse and visceral survival with minimal calculation.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Button Strip -->
+      <div class="flex flex-wrap gap-4 pt-2">
+        <button id="retake-btn" class="brutal-btn bg-comicYellow font-comic text-2xl px-6 py-3.5 rounded-xl flex items-center gap-2">
+          <span>🔄 RETAKE TEST</span>
+        </button>
+        <button id="copy-result-btn" class="brutal-btn bg-white hover:bg-neutral-100 font-bold text-base px-6 py-3.5 rounded-xl flex items-center gap-2">
+          <span>📋 COPY SHAREABLE DOSSIER</span>
+        </button>
+        <button id="open-roster-btn-results" class="brutal-btn bg-comicCyan font-comic text-2xl px-6 py-3.5 rounded-xl flex items-center gap-2">
+          <span>EXPLORE ALL 50 CARTOONS 📖</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Multiverse Codex Modal -->
+    <div id="roster-modal" class="fixed inset-0 z-50 bg-black/80 p-3 sm:p-6 md:p-8 hidden flex flex-col justify-center items-center backdrop-blur-sm">
+      <div class="bg-comicCream border-4 border-black w-full max-w-6xl h-full max-h-[92vh] rounded-2xl shadow-brutal-xl flex flex-col overflow-hidden">
+        
+        <!-- Modal Header -->
+        <div class="p-4 md:p-5 bg-comicYellow border-b-4 border-black flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <span class="text-xs font-black uppercase tracking-wider bg-black text-white px-2 py-0.5 rounded">
+              MULTIVERSE CODEX
+            </span>
+            <h3 class="font-comic text-3xl md:text-5xl text-black leading-none mt-1">THE 50 CARTOON LEGENDS ARCHIVE</h3>
+          </div>
+          <button id="close-roster-btn" class="brutal-btn bg-comicPink text-white font-comic text-2xl px-4 py-1.5 rounded-xl">
+            CLOSE ✕
+          </button>
+        </div>
+
+        <!-- Filter & Search Bar -->
+        <div class="p-3 md:p-4 bg-white border-b-3 border-black flex flex-wrap gap-3 items-center justify-between">
+          <input 
+            type="text" 
+            id="roster-search" 
+            placeholder="Search character, universe, or archetype..." 
+            class="px-4 py-2 border-2 border-black rounded-lg font-bold text-sm w-full sm:w-80 focus:outline-none focus:ring-2 focus:ring-comicPink shadow-brutal-xs"
+          />
+
+          <!-- Category filter buttons -->
+          <div class="flex flex-wrap gap-1.5 text-xs font-black">
+            <button class="filter-btn active px-3 py-1.5 border-2 border-black rounded bg-comicYellow shadow-brutal-xs" data-filter="all">ALL (50)</button>
+            <button class="filter-btn px-3 py-1.5 border-2 border-black rounded bg-white hover:bg-neutral-100" data-filter="anime">ANIME / MANGA</button>
+            <button class="filter-btn px-3 py-1.5 border-2 border-black rounded bg-white hover:bg-neutral-100" data-filter="superhero">SUPERHEROES</button>
+            <button class="filter-btn px-3 py-1.5 border-2 border-black rounded bg-white hover:bg-neutral-100" data-filter="idealist">IDEALISTS</button>
+            <button class="filter-btn px-3 py-1.5 border-2 border-black rounded bg-white hover:bg-neutral-100" data-filter="rebel">REBELS</button>
+          </div>
+        </div>
+
+        <!-- Roster Scroll Grid -->
+        <div id="roster-grid" class="flex-1 overflow-y-auto p-4 md:p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <!-- Footer Stats -->
+        <div class="p-3 bg-neutral-100 border-t-3 border-black flex items-center justify-between text-xs font-bold text-neutral-700">
+          <span>Displaying <span id="roster-count" class="font-black">50</span> Cartoon Icons</span>
+          <span>Click on any card to view complete profile and psychometric metrics</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-comicGreen text-black font-bold border-3 border-black px-5 py-3 rounded-xl shadow-brutal transform translate-y-24 opacity-0 transition-all duration-300 flex items-center gap-2 pointer-events-none">
+      <span class="text-xl">⚡</span>
+      <span id="toast-message">Dossier copied to clipboard!</span>
+    </div>
+  </main>
+
+  <script>
+    /*
+     * Web Audio API Sound Effects Synthesizer
+     */
+    let audioContext = null;
+    let sfxEnabled = true;
+
+    function playSound(type) {
+      if (!sfxEnabled) return;
+      try {
+        if (!audioContext) {
+          audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioContext.state === 'suspended') {
+          audioContext.resume();
+        }
+
+        const now = audioContext.currentTime;
+        const osc = audioContext.createOscillator();
+        const gain = audioContext.createGain();
+        osc.connect(gain);
+        gain.connect(audioContext.destination);
+
+        if (type === 'click') {
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(320, now);
+          osc.frequency.exponentialRampToValueAtTime(780, now + 0.08);
+          gain.gain.setValueAtTime(0.12, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+          osc.start(now);
+          osc.stop(now + 0.08);
+        } else if (type === 'pop') {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(540, now);
+          osc.frequency.exponentialRampToValueAtTime(1100, now + 0.12);
+          gain.gain.setValueAtTime(0.18, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.12);
+          osc.start(now);
+          osc.stop(now + 0.12);
+        } else if (type === 'fanfare') {
+          // Double note pop
+          osc.type = 'square';
+          osc.frequency.setValueAtTime(440, now);
+          osc.frequency.setValueAtTime(659.25, now + 0.1);
+          osc.frequency.setValueAtTime(880, now + 0.2);
+          gain.gain.setValueAtTime(0.1, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+          osc.start(now);
+          osc.stop(now + 0.35);
+        }
+      } catch (e) {
+        // Audio fallback
+      }
+    }
+
+    const soundToggleBtn = document.getElementById('sound-toggle-btn');
+    const soundIcon = document.getElementById('sound-icon');
+    const soundLabel = document.getElementById('sound-label');
+
+    soundToggleBtn.addEventListener('click', () => {
+      sfxEnabled = !sfxEnabled;
+      soundIcon.textContent = sfxEnabled ? '🔊' : '🔇';
+      soundLabel.textContent = sfxEnabled ? 'SFX: ON' : 'SFX: OFF';
+      if (sfxEnabled) playSound('click');
+    });
+
+    /*
+     * Custom Handcrafted Cartoon Vector SVG Generator for 50 Characters
+     * Generates rich, crisp comic cartoon avatars with signature traits.
+     */
+    function getCartoonSvg(charId, className = "w-full h-full") {
+      const baseSvg = (innerContent, bg = "#FFE600") => `
+        <svg viewBox="0 0 200 200" class="${className}" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="dot-${charId}" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1.2" fill="#000" opacity="0.12"/>
+            </pattern>
+          </defs>
+          <rect width="200" height="200" fill="${bg}"/>
+          <rect width="200" height="200" fill="url(#dot-${charId})"/>
+          ${innerContent}
+          <rect x="3" y="3" width="194" height="194" fill="none" stroke="#000" stroke-width="6"/>
+        </svg>
+      `;
+
+      // Character-specific custom comic cartoon art
+      switch (charId) {
+        case 'superman':
+          return baseSvg(`
+            <!-- Red Cape -->
+            <path d="M40,150 Q10,190 30,200 L170,200 Q190,190 160,150 Z" fill="#E50000" stroke="#000" stroke-width="4"/>
+            <!-- Blue Suit Neck -->
+            <path d="M50,150 L150,150 L160,200 L40,200 Z" fill="#0044CC" stroke="#000" stroke-width="4"/>
+            <!-- Superman Diamond Shield & S -->
+            <polygon points="100,162 125,175 115,195 85,195 75,175" fill="#FFE600" stroke="#000" stroke-width="3"/>
+            <path d="M90,172 Q105,168 108,175 Q110,182 95,185 Q105,188 108,193" fill="none" stroke="#E50000" stroke-width="3.5" stroke-linecap="round"/>
+            <!-- Head & Face -->
+            <ellipse cx="100" cy="98" rx="42" ry="48" fill="#FFD1B3" stroke="#000" stroke-width="4"/>
+            <!-- Strong Jaw -->
+            <path d="M80,128 Q100,146 120,128" fill="none" stroke="#000" stroke-width="3"/>
+            <path d="M92,122 L108,122" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+            <!-- Cartoon Eyes -->
+            <ellipse cx="86" cy="94" rx="6" ry="8" fill="#0066FF"/>
+            <circle cx="88" cy="92" r="2.5" fill="#FFF"/>
+            <ellipse cx="114" cy="94" rx="6" ry="8" fill="#0066FF"/>
+            <circle cx="116" cy="92" r="2.5" fill="#FFF"/>
+            <!-- Eyebrows -->
+            <path d="M78,82 L95,84" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+            <path d="M122,82 L105,84" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+            <!-- Black Slick Hair with Iconic 'S' Curl -->
+            <path d="M58,95 Q54,50 100,48 Q146,50 142,95 Q135,60 100,60 Q65,60 58,95 Z" fill="#111" stroke="#000" stroke-width="4"/>
+            <path d="M98,60 Q106,75 96,82" fill="none" stroke="#111" stroke-width="5" stroke-linecap="round"/>
+          `, '#00F0FF');
+
+        case 'batman':
+          return baseSvg(`
+            <!-- Dark Cowl Shoulders -->
+            <path d="M30,160 L170,160 L180,200 L20,200 Z" fill="#222" stroke="#000" stroke-width="4"/>
+            <!-- Batman Cowl with Tall Pointy Ears -->
+            <path d="M55,140 L50,55 L75,85 Q100,80 125,85 L150,55 L145,140 Q100,160 55,140 Z" fill="#1B1D24" stroke="#000" stroke-width="4"/>
+            <!-- Exposed Chin -->
+            <path d="M78,118 Q100,150 122,118 Q100,132 78,118 Z" fill="#FFD1B3" stroke="#000" stroke-width="3"/>
+            <!-- Grim mouth -->
+            <line x1="88" y1="130" x2="112" y2="130" stroke="#000" stroke-width="3.5" stroke-linecap="round"/>
+            <!-- Slitted glowing white cartoon bat-eyes -->
+            <polygon points="76,100 95,96 90,105" fill="#FFFFFF" stroke="#000" stroke-width="2.5"/>
+            <polygon points="124,100 105,96 110,105" fill="#FFFFFF" stroke="#000" stroke-width="2.5"/>
+            <!-- Bat Chest Symbol -->
+            <path d="M85,175 Q100,170 115,175 Q110,185 100,182 Q90,185 85,175 Z" fill="#FFE600" stroke="#000" stroke-width="2"/>
+          `, '#FFE600');
+
+        case 'spiderman':
+          return baseSvg(`
+            <!-- Red Masked Head -->
+            <ellipse cx="100" cy="100" rx="46" ry="52" fill="#E60026" stroke="#000" stroke-width="4"/>
+            <!-- Web Lines on Mask -->
+            <path d="M100,48 L100,152 M54,100 L146,100 M68,68 L132,132 M68,132 L132,68" stroke="#111" stroke-width="2.5" opacity="0.7"/>
+            <ellipse cx="100" cy="100" rx="24" ry="26" fill="none" stroke="#111" stroke-width="2.5" opacity="0.7"/>
+            <ellipse cx="100" cy="100" rx="38" ry="42" fill="none" stroke="#111" stroke-width="2.5" opacity="0.7"/>
+            <!-- Huge Expressive Comic Webbed Eyes -->
+            <polygon points="62,90 92,72 88,112" fill="#FFF" stroke="#000" stroke-width="5"/>
+            <polygon points="138,90 108,72 112,112" fill="#FFF" stroke="#000" stroke-width="5"/>
+            <!-- Suit Neck -->
+            <path d="M55,152 L145,152 L160,200 L40,200 Z" fill="#E60026" stroke="#000" stroke-width="4"/>
+            <polygon points="40,165 70,200 40,200" fill="#0044CC" stroke="#000" stroke-width="3"/>
+            <polygon points="160,165 130,200 160,200" fill="#0044CC" stroke="#000" stroke-width="3"/>
+          `, '#00F0FF');
+
+        case 'allmight':
+          return baseSvg(`
+            <!-- Massive Golden V-Tuft Hair -->
+            <path d="M60,80 L35,25 L75,65 Q100,55 125,65 L165,25 L140,80 Z" fill="#FFD700" stroke="#000" stroke-width="4"/>
+            <!-- Chiseled Head -->
+            <polygon points="65,85 135,85 125,145 100,155 75,145" fill="#FFC499" stroke="#000" stroke-width="4"/>
+            <!-- Deep Shadowed Eyes with Bright Blue Glint -->
+            <rect x="74" y="92" width="22" height="15" rx="3" fill="#0A0A0A"/>
+            <circle cx="85" cy="99" r="3" fill="#00F0FF"/>
+            <rect x="104" y="92" width="22" height="15" rx="3" fill="#0A0A0A"/>
+            <circle cx="115" cy="99" r="3" fill="#00F0FF"/>
+            <!-- Huge Fearless Smile -->
+            <path d="M72,122 Q100,145 128,122 Z" fill="#FFF" stroke="#000" stroke-width="3.5"/>
+            <path d="M76,126 L124,126" stroke="#000" stroke-width="2"/>
+            <!-- High Collar Suit -->
+            <path d="M45,155 L155,155 L170,200 L30,200 Z" fill="#003399" stroke="#000" stroke-width="4"/>
+            <polygon points="100,155 85,185 115,185" fill="#E50000" stroke="#000" stroke-width="3"/>
+          `, '#FF0055');
+
+        case 'tanjiro':
+          return baseSvg(`
+            <!-- Burgundy Spiky Hair -->
+            <path d="M50,110 Q40,55 100,45 Q160,55 150,110 Q130,55 100,60 Q70,55 50,110 Z" fill="#8B1E28" stroke="#000" stroke-width="4"/>
+            <!-- Head & Face -->
+            <ellipse cx="100" cy="105" rx="42" ry="44" fill="#FFE0CC" stroke="#000" stroke-width="4"/>
+            <!-- Forehead Flame Scar -->
+            <path d="M75,75 Q85,70 82,88 Q78,82 75,75 Z" fill="#B32424" stroke="#000" stroke-width="2"/>
+            <!-- Large Warm Comic Eyes -->
+            <circle cx="82" cy="105" r="9" fill="#8B2500" stroke="#000" stroke-width="3"/>
+            <circle cx="84" cy="103" r="3.5" fill="#FFF"/>
+            <circle cx="118" cy="105" r="9" fill="#8B2500" stroke="#000" stroke-width="3"/>
+            <circle cx="120" cy="103" r="3.5" fill="#FFF"/>
+            <!-- Hanafuda Earrings -->
+            <rect x="52" y="112" width="10" height="22" rx="2" fill="#FFF" stroke="#000" stroke-width="2"/>
+            <circle cx="57" cy="120" r="3" fill="#E60000"/>
+            <rect x="138" y="112" width="10" height="22" rx="2" fill="#FFF" stroke="#000" stroke-width="2"/>
+            <circle cx="143" cy="120" r="3" fill="#E60000"/>
+            <!-- Green-Black Checkered Haori -->
+            <path d="M45,152 L155,152 L170,200 L30,200 Z" fill="#00AA66" stroke="#000" stroke-width="4"/>
+            <rect x="65" y="152" width="20" height="25" fill="#111" stroke="#000" stroke-width="2"/>
+            <rect x="115" y="152" width="20" height="25" fill="#111" stroke="#000" stroke-width="2"/>
+            <rect x="90" y="177" width="20" height="23" fill="#111" stroke="#000" stroke-width="2"/>
+          `, '#00FF66');
+
+        case 'luffy':
+          return baseSvg(`
+            <!-- Iconic Straw Hat (Yellow + Red Ribbon) -->
+            <ellipse cx="100" cy="65" rx="72" ry="24" fill="#FFCC00" stroke="#000" stroke-width="4"/>
+            <path d="M68,62 Q100,28 132,62 Z" fill="#FFCC00" stroke="#000" stroke-width="4"/>
+            <path d="M68,60 Q100,52 132,60" stroke="#E60000" stroke-width="7" fill="none"/>
+            <!-- Black Shonen Hair under hat -->
+            <path d="M55,85 Q65,115 60,125 M145,85 Q135,115 140,125" stroke="#111" stroke-width="8" stroke-linecap="round"/>
+            <!-- Round Face -->
+            <ellipse cx="100" cy="110" rx="38" ry="40" fill="#FFE0B2" stroke="#000" stroke-width="4"/>
+            <!-- Left Eye Stitch/Scar -->
+            <path d="M78,118 L88,118 M83,115 L83,121" stroke="#000" stroke-width="2.5"/>
+            <!-- Huge Cartoon Dot Eyes -->
+            <circle cx="84" cy="102" r="5" fill="#000"/>
+            <circle cx="116" cy="102" r="5" fill="#000"/>
+            <!-- Massive Joyful D-Mouth -->
+            <path d="M75,124 Q100,152 125,124 Z" fill="#FFF" stroke="#000" stroke-width="3"/>
+            <path d="M82,132 Q100,140 118,132" stroke="#E60000" stroke-width="3" fill="none"/>
+            <!-- Red Vest -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#E60000" stroke="#000" stroke-width="4"/>
+            <!-- Open Chest -->
+            <polygon points="100,152 82,200 118,200" fill="#FFE0B2" stroke="#000" stroke-width="3"/>
+          `, '#FFE600');
+
+        case 'naruto':
+          return baseSvg(`
+            <!-- Spiky Yellow Hair -->
+            <polygon points="60,65 50,30 75,45 100,20 125,45 150,30 140,65" fill="#FFE600" stroke="#000" stroke-width="4"/>
+            <!-- Leaf Village Forehead Protector -->
+            <rect x="62" y="62" width="76" height="22" rx="3" fill="#1A2A44" stroke="#000" stroke-width="3.5"/>
+            <rect x="78" y="65" width="44" height="16" rx="2" fill="#CCCCCC" stroke="#000" stroke-width="2"/>
+            <circle cx="100" cy="73" r="4" fill="none" stroke="#000" stroke-width="2"/>
+            <!-- Face -->
+            <ellipse cx="100" cy="112" rx="38" ry="40" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Whisker Marks -->
+            <path d="M68,112 L78,110 M68,116 L78,116 M68,120 L78,122" stroke="#000" stroke-width="2.5"/>
+            <path d="M132,112 L122,110 M132,116 L122,116 M132,120 L122,122" stroke="#000" stroke-width="2.5"/>
+            <!-- Blue Eyes -->
+            <ellipse cx="84" cy="100" rx="5" ry="6" fill="#0099FF"/>
+            <circle cx="86" cy="98" r="2" fill="#FFF"/>
+            <ellipse cx="116" cy="100" rx="5" ry="6" fill="#0099FF"/>
+            <circle cx="118" cy="98" r="2" fill="#FFF"/>
+            <!-- Grinning Mouth -->
+            <path d="M82,130 Q100,145 118,130 Z" fill="#FFF" stroke="#000" stroke-width="3"/>
+            <!-- Orange & Blue Tracksuit Collar -->
+            <path d="M45,154 L155,154 L165,200 L35,200 Z" fill="#FF6B00" stroke="#000" stroke-width="4"/>
+            <path d="M75,154 L100,180 L125,154" fill="#1A2A44" stroke="#000" stroke-width="3"/>
+          `, '#FF6B00');
+
+        case 'goku':
+          return baseSvg(`
+            <!-- Wild Spiky Saiyan Hair -->
+            <path d="M40,110 L15,80 L45,65 L20,35 L60,40 L90,15 L110,40 L150,15 L145,45 L180,45 L160,80 L185,100 L150,110" fill="#111" stroke="#000" stroke-width="4"/>
+            <!-- Head & Face -->
+            <polygon points="68,90 132,90 120,145 100,154 80,145" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Fierce Comic Eyes -->
+            <polygon points="76,102 96,96 90,110" fill="#FFF" stroke="#000" stroke-width="3"/>
+            <circle cx="86" cy="104" r="3.5" fill="#111"/>
+            <polygon points="124,102 104,96 110,110" fill="#FFF" stroke="#000" stroke-width="3"/>
+            <circle cx="114" cy="104" r="3.5" fill="#111"/>
+            <!-- Determined Smirk -->
+            <path d="M88,132 Q100,140 112,132" stroke="#000" stroke-width="3" fill="none"/>
+            <!-- Orange Gi & Dark Blue Undershirt -->
+            <path d="M40,154 L160,154 L170,200 L30,200 Z" fill="#FF6B00" stroke="#000" stroke-width="4"/>
+            <polygon points="100,154 75,200 125,200" fill="#003399" stroke="#000" stroke-width="3"/>
+          `, '#FFE600');
+
+        case 'denji':
+          return baseSvg(`
+            <!-- Messy Blonde Hair -->
+            <polygon points="55,90 40,65 65,70 60,45 80,55 100,38 120,55 140,45 135,70 160,65 145,90" fill="#FFD54F" stroke="#000" stroke-width="3.5"/>
+            <!-- Head -->
+            <ellipse cx="100" cy="108" rx="38" ry="40" fill="#FFE0B2" stroke="#000" stroke-width="4"/>
+            <!-- Tired Sharp Eyes -->
+            <ellipse cx="82" cy="102" rx="6" ry="4" fill="#996633" stroke="#000" stroke-width="2"/>
+            <circle cx="84" cy="101" r="1.5" fill="#FFF"/>
+            <ellipse cx="118" cy="102" rx="6" ry="4" fill="#996633" stroke="#000" stroke-width="2"/>
+            <circle cx="120" cy="101" r="1.5" fill="#FFF"/>
+            <!-- Sharp Pointy Shark Teeth Grin -->
+            <path d="M80,126 Q100,146 120,126 Z" fill="#FFF" stroke="#000" stroke-width="3"/>
+            <path d="M82,126 L86,134 L90,126 L94,134 L98,126 L102,134 L106,126 L110,134 L114,126 L118,134" stroke="#000" stroke-width="2"/>
+            <!-- White Shirt with Messy Black Tie -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#FFF" stroke="#000" stroke-width="4"/>
+            <polygon points="96,152 104,152 108,195 100,200 92,195" fill="#111" stroke="#000" stroke-width="2.5"/>
+            <!-- Chainsaw Pull Cord on Chest -->
+            <circle cx="70" cy="168" r="8" fill="none" stroke="#FF6B00" stroke-width="4"/>
+          `, '#FF0055');
+
+        case 'deadpool':
+          return baseSvg(`
+            <!-- Red Masked Head with Pointed Tip -->
+            <path d="M55,120 Q50,60 98,42 Q102,40 106,45 Q150,60 145,120 Q100,160 55,120 Z" fill="#D31027" stroke="#000" stroke-width="4"/>
+            <!-- Black Eye Patches -->
+            <ellipse cx="78" cy="102" rx="16" ry="22" fill="#111" stroke="#000" stroke-width="3"/>
+            <ellipse cx="122" cy="102" rx="16" ry="22" fill="#111" stroke="#000" stroke-width="3"/>
+            <!-- Sarcastic Squinty White Eyes -->
+            <polygon points="70,105 88,96 85,108" fill="#FFF" stroke="#000" stroke-width="2"/>
+            <polygon points="116,105 130,100 126,108" fill="#FFF" stroke="#000" stroke-width="2"/>
+            <!-- Shoulders with Katana Straps -->
+            <path d="M40,152 L160,152 L170,200 L30,200 Z" fill="#D31027" stroke="#000" stroke-width="4"/>
+            <line x1="45" y1="152" x2="155" y2="200" stroke="#111" stroke-width="7"/>
+            <circle cx="100" cy="176" r="10" fill="#FFE600" stroke="#000" stroke-width="3"/>
+          `, '#FF0055');
+
+        case 'saitama':
+          return baseSvg(`
+            <!-- Shiny Egg-Shaped Bald Head -->
+            <ellipse cx="100" cy="96" rx="46" ry="54" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Glint on head -->
+            <path d="M80,55 Q95,50 110,55" stroke="#FFF" stroke-width="4" stroke-linecap="round" fill="none"/>
+            <!-- Hilariously Simple Bored Face -->
+            <ellipse cx="80" cy="98" rx="2.5" ry="3.5" fill="#000"/>
+            <ellipse cx="120" cy="98" rx="2.5" ry="3.5" fill="#000"/>
+            <line x1="74" y1="88" x2="88" y2="88" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+            <line x1="112" y1="88" x2="126" y2="88" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="100" cy="108" rx="2" ry="3" fill="#000"/>
+            <!-- Straight Flat Mouth -->
+            <line x1="88" y1="124" x2="112" y2="124" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+            <!-- Yellow Hero Suit with White Cape Collar -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#FFD700" stroke="#000" stroke-width="4"/>
+            <circle cx="70" cy="155" r="7" fill="#FFF" stroke="#000" stroke-width="3"/>
+            <circle cx="130" cy="155" r="7" fill="#FFF" stroke="#000" stroke-width="3"/>
+            <polygon points="100,152 90,175 110,175" fill="#FFF" stroke="#000" stroke-width="2.5"/>
+          `, '#FFE600');
+
+        case 'gojo':
+          return baseSvg(`
+            <!-- Spiky White Hair -->
+            <polygon points="55,80 35,40 65,45 80,20 100,35 120,20 135,45 165,40 145,80" fill="#FFFFFF" stroke="#000" stroke-width="4"/>
+            <!-- Face -->
+            <polygon points="70,85 130,85 120,140 100,150 80,140" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Black Blindfold Wrapping Head -->
+            <rect x="62" y="85" width="76" height="26" rx="4" fill="#111" stroke="#000" stroke-width="3.5"/>
+            <line x1="62" y1="98" x2="138" y2="98" stroke="#333" stroke-width="2"/>
+            <!-- Confident Cocky Smirk -->
+            <path d="M92,128 Q106,134 116,124" stroke="#000" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+            <!-- High-Neck Dark Jujutsu Tech Uniform -->
+            <path d="M45,150 L155,150 L165,200 L35,200 Z" fill="#1A1829" stroke="#000" stroke-width="4"/>
+            <rect x="75" y="145" width="50" height="25" fill="#1A1829" stroke="#000" stroke-width="3"/>
+          `, '#00F0FF');
+
+        case 'levi':
+          return baseSvg(`
+            <!-- Black Undercut Hair -->
+            <path d="M55,90 Q50,50 100,48 Q150,50 145,90 Q120,60 100,65 Q80,60 55,90 Z" fill="#111" stroke="#000" stroke-width="4"/>
+            <path d="M95,65 L95,88 M105,65 L105,88" stroke="#111" stroke-width="4" stroke-linecap="round"/>
+            <!-- Sharp Narrow Face -->
+            <polygon points="70,85 130,85 118,140 100,148 82,140" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Lethal Deadpan Eyes -->
+            <polygon points="75,98 94,94 92,104 77,104" fill="#FFF" stroke="#000" stroke-width="2.5"/>
+            <circle cx="86" cy="100" r="2.5" fill="#2B3A42"/>
+            <polygon points="125,98 106,94 108,104 123,104" fill="#FFF" stroke="#000" stroke-width="2.5"/>
+            <circle cx="114" cy="100" r="2.5" fill="#2B3A42"/>
+            <!-- Thin Cold Line Mouth -->
+            <line x1="88" y1="126" x2="112" y2="126" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+            <!-- White Cravat & Survey Corps Brown Jacket -->
+            <path d="M45,150 L155,150 L165,200 L35,200 Z" fill="#8B5A2B" stroke="#000" stroke-width="4"/>
+            <!-- Cravat Ribbon -->
+            <polygon points="100,150 90,175 100,185 110,175" fill="#FFF" stroke="#000" stroke-width="2.5"/>
+          `, '#00FF66');
+
+        case 'ironman':
+          return baseSvg(`
+            <!-- Gold and Crimson Armored Helmet -->
+            <path d="M56,60 Q100,40 144,60 L148,125 Q100,165 52,125 Z" fill="#B30000" stroke="#000" stroke-width="4"/>
+            <!-- Gold Faceplate -->
+            <polygon points="72,75 128,75 122,135 100,148 78,135" fill="#FFCC00" stroke="#000" stroke-width="3.5"/>
+            <!-- Glowing Blue Slit Eyes -->
+            <polygon points="78,96 95,96 93,102 80,102" fill="#00F0FF" stroke="#000" stroke-width="2"/>
+            <polygon points="122,96 105,96 107,102 120,102" fill="#00F0FF" stroke="#000" stroke-width="2"/>
+            <!-- Mouth Vent -->
+            <line x1="88" y1="124" x2="112" y2="124" stroke="#000" stroke-width="3"/>
+            <!-- Armored Neck & Arc Reactor -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#B30000" stroke="#000" stroke-width="4"/>
+            <circle cx="100" cy="180" r="14" fill="#00F0FF" stroke="#FFF" stroke-width="3"/>
+            <polygon points="100,170 108,185 92,185" fill="#FFF"/>
+          `, '#FFE600');
+
+        case 'guts':
+          return baseSvg(`
+            <!-- Spiky Short Black Hair -->
+            <polygon points="60,80 45,50 70,55 85,30 100,45 115,30 130,55 155,50 140,80" fill="#111" stroke="#000" stroke-width="4"/>
+            <!-- Grizzled Face with Bridge Nose Scar -->
+            <polygon points="68,85 132,85 120,145 100,155 80,145" fill="#D29977" stroke="#000" stroke-width="4"/>
+            <line x1="84" y1="108" x2="116" y2="108" stroke="#000" stroke-width="3"/>
+            <!-- Closed Blind Right Eye (Scarred) -->
+            <line x1="74" y1="98" x2="94" y2="102" stroke="#000" stroke-width="4"/>
+            <line x1="84" y1="90" x2="84" y2="110" stroke="#7A1F1D" stroke-width="3"/>
+            <!-- Burning Fierce Left Eye -->
+            <polygon points="124,100 106,96 110,106" fill="#FFF" stroke="#000" stroke-width="2.5"/>
+            <circle cx="115" cy="101" r="3" fill="#B30000"/>
+            <!-- Gritted Teeth -->
+            <rect x="86" y="128" width="28" height="8" fill="#FFF" stroke="#000" stroke-width="2.5"/>
+            <line x1="93" y1="128" x2="93" y2="136" stroke="#000" stroke-width="2"/>
+            <line x1="100" y1="128" x2="100" y2="136" stroke="#000" stroke-width="2"/>
+            <line x1="107" y1="128" x2="107" y2="136" stroke="#000" stroke-width="2"/>
+            <!-- Black Berserker Armor & Giant Sword Hilt in Back -->
+            <path d="M40,154 L160,154 L170,200 L30,200 Z" fill="#1E2024" stroke="#000" stroke-width="4"/>
+            <rect x="145" y="30" width="16" height="130" fill="#777" stroke="#000" stroke-width="3" transform="rotate(20 145 30)"/>
+          `, '#FF6B00');
+
+        case 'zoro':
+          return baseSvg(`
+            <!-- Green Buzz Spiky Hair -->
+            <polygon points="60,80 45,55 70,55 85,35 100,45 115,35 130,55 155,55 140,80" fill="#2ECC71" stroke="#000" stroke-width="4"/>
+            <!-- Face -->
+            <polygon points="68,85 132,85 120,145 100,155 80,145" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Left Eye Slash Scar (Closed) -->
+            <line x1="110" y1="90" x2="120" y2="114" stroke="#000" stroke-width="3.5"/>
+            <!-- Sharp Right Eye -->
+            <polygon points="76,102 96,96 90,108" fill="#FFF" stroke="#000" stroke-width="2.5"/>
+            <circle cx="86" cy="102" r="3" fill="#111"/>
+            <!-- Three Gold Earrings on Left Ear -->
+            <circle cx="134" cy="115" r="3" fill="#FFCC00" stroke="#000" stroke-width="1.5"/>
+            <circle cx="136" cy="122" r="3" fill="#FFCC00" stroke="#000" stroke-width="1.5"/>
+            <circle cx="138" cy="129" r="3" fill="#FFCC00" stroke="#000" stroke-width="1.5"/>
+            <!-- Green Harakiri Coat / Dark Robes -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#0E4D34" stroke="#000" stroke-width="4"/>
+            <line x1="60" y1="152" x2="140" y2="200" stroke="#C0392B" stroke-width="6"/>
+          `, '#00FF66');
+
+        case 'wolverine':
+          return baseSvg(`
+            <!-- Black & Yellow Winged Cowl Fins -->
+            <path d="M30,35 L60,110 L140,110 L170,35 L135,75 Q100,65 65,75 Z" fill="#111" stroke="#000" stroke-width="4"/>
+            <!-- Yellow Mask Top -->
+            <ellipse cx="100" cy="95" rx="36" ry="40" fill="#FFCC00" stroke="#000" stroke-width="3.5"/>
+            <!-- Unmasked Lower Half & Grizzled Stubble -->
+            <polygon points="72,110 128,110 118,145 100,154 82,145" fill="#F4C29E" stroke="#000" stroke-width="3.5"/>
+            <!-- Snarl Mouth with Canines -->
+            <path d="M84,130 Q100,140 116,130 Z" fill="#FFF" stroke="#000" stroke-width="2.5"/>
+            <!-- Narrow White Angled Eyes -->
+            <polygon points="74,98 92,96 88,105" fill="#FFF" stroke="#000" stroke-width="2"/>
+            <polygon points="126,98 108,96 112,105" fill="#FFF" stroke="#000" stroke-width="2"/>
+            <!-- Yellow & Blue Suit with Adamantium Claws emerging -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#FFCC00" stroke="#000" stroke-width="4"/>
+            <polygon points="100,152 75,200 125,200" fill="#0044CC" stroke="#000" stroke-width="3"/>
+            <!-- Claws -->
+            <line x1="25" y1="165" x2="10" y2="120" stroke="#CCCCCC" stroke-width="4"/>
+            <line x1="32" y1="165" x2="20" y2="115" stroke="#CCCCCC" stroke-width="4"/>
+            <line x1="39" y1="165" x2="30" y2="118" stroke="#CCCCCC" stroke-width="4"/>
+          `, '#FFE600');
+
+        case 'eren':
+          return baseSvg(`
+            <!-- Long Messy Dark Brown Hair (Man-bun / Shag) -->
+            <path d="M50,90 Q40,40 100,35 Q160,40 150,90 Q160,140 145,145 M50,90 Q40,140 55,145" fill="#2E1C0C" stroke="#000" stroke-width="4"/>
+            <!-- Face -->
+            <polygon points="70,85 130,85 118,145 100,154 82,145" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Intense Hollow Green Eyes -->
+            <polygon points="76,102 96,96 90,108" fill="#FFF" stroke="#000" stroke-width="2.5"/>
+            <circle cx="86" cy="102" r="3.5" fill="#16A085"/>
+            <polygon points="124,102 104,96 110,108" fill="#FFF" stroke="#000" stroke-width="2.5"/>
+            <circle cx="114" cy="102" r="3.5" fill="#16A085"/>
+            <!-- Under-eye Titan Marks -->
+            <path d="M78,112 L84,124 M86,112 L90,122" stroke="#C0392B" stroke-width="2.5"/>
+            <path d="M122,112 L116,124 M114,112 L110,122" stroke="#C0392B" stroke-width="2.5"/>
+            <!-- Black Coat / Shirt -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#111" stroke="#000" stroke-width="4"/>
+            <polygon points="100,152 85,185 115,185" fill="#FFE0BD" stroke="#000" stroke-width="2"/>
+          `, '#FF0055');
+
+        case 'edward':
+          return baseSvg(`
+            <!-- Golden Braided Hair with Signature Antenna Ahoge -->
+            <path d="M100,45 Q90,20 100,15 Q110,20 104,45" fill="#FFD700" stroke="#000" stroke-width="3"/>
+            <path d="M55,80 Q50,45 100,42 Q150,45 145,80 Q130,55 100,58 Q70,55 55,80 Z" fill="#FFD700" stroke="#000" stroke-width="4"/>
+            <!-- Face -->
+            <ellipse cx="100" cy="105" rx="38" ry="40" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Golden Alchemist Eyes -->
+            <ellipse cx="84" cy="100" rx="6" ry="7" fill="#E67E22" stroke="#000" stroke-width="2.5"/>
+            <circle cx="86" cy="98" r="2" fill="#FFF"/>
+            <ellipse cx="116" cy="100" rx="6" ry="7" fill="#E67E22" stroke="#000" stroke-width="2.5"/>
+            <circle cx="118" cy="98" r="2" fill="#FFF"/>
+            <!-- Cocky Snarl -->
+            <path d="M86,126 Q100,136 114,124" stroke="#000" stroke-width="3" fill="none"/>
+            <!-- Signature Crimson Hooded Coat with Flamel Cross -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#C0392B" stroke="#000" stroke-width="4"/>
+            <polygon points="100,152 85,200 115,200" fill="#111" stroke="#000" stroke-width="3"/>
+            <!-- Automail Right Shoulder Hint -->
+            <circle cx="45" cy="170" r="10" fill="#BDC3C7" stroke="#000" stroke-width="3"/>
+          `, '#FFE600');
+
+        case 'alphonse':
+          return baseSvg(`
+            <!-- Massive Steel Knight Helmet -->
+            <path d="M60,65 L100,35 L140,65 L145,135 L100,158 L55,135 Z" fill="#BDC3C7" stroke="#000" stroke-width="4"/>
+            <!-- Top Horn Spike -->
+            <polygon points="100,35 95,12 105,12" fill="#7F8C8D" stroke="#000" stroke-width="3"/>
+            <!-- Visor Slit with Gentle Red Soul Lights -->
+            <rect x="70" y="88" width="60" height="14" rx="3" fill="#111" stroke="#000" stroke-width="3"/>
+            <circle cx="86" cy="95" r="4" fill="#E74C3C"/>
+            <circle cx="114" cy="95" r="4" fill="#E74C3C"/>
+            <!-- Chin Guard Vents -->
+            <line x1="88" y1="120" x2="112" y2="120" stroke="#000" stroke-width="3"/>
+            <line x1="92" y1="128" x2="108" y2="128" stroke="#000" stroke-width="3"/>
+            <!-- Giant Steel Plate Shoulders -->
+            <path d="M35,152 L165,152 L175,200 L25,200 Z" fill="#BDC3C7" stroke="#000" stroke-width="4"/>
+            <circle cx="50" cy="175" r="10" fill="#95A5A6" stroke="#000" stroke-width="3"/>
+            <circle cx="150" cy="175" r="10" fill="#95A5A6" stroke="#000" stroke-width="3"/>
+          `, '#00F0FF');
+
+        case 'kakashi':
+          return baseSvg(`
+            <!-- Swept-back Silver Hair -->
+            <polygon points="50,75 35,35 60,38 80,15 110,25 140,15 145,50 155,75" fill="#E0E0E0" stroke="#000" stroke-width="4"/>
+            <!-- Headband Tilted Covering Left Eye -->
+            <rect x="60" y="70" width="80" height="24" rx="3" fill="#1C2833" stroke="#000" stroke-width="3.5" transform="rotate(8 100 80)"/>
+            <rect x="76" y="74" width="36" height="16" rx="2" fill="#BDC3C7" stroke="#000" stroke-width="2" transform="rotate(8 100 80)"/>
+            <!-- Face -->
+            <polygon points="70,85 130,85 120,145 100,155 80,145" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Dark Mask Covering Lower Half -->
+            <path d="M68,106 L132,106 L120,150 L100,156 L80,150 Z" fill="#2C3E50" stroke="#000" stroke-width="3.5"/>
+            <!-- Relaxed Right Eye -->
+            <path d="M78,100 Q88,94 96,102" stroke="#000" stroke-width="3.5" fill="none"/>
+            <ellipse cx="87" cy="100" rx="3" ry="4" fill="#000"/>
+            <!-- Flak Jacket Green Collar -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#275038" stroke="#000" stroke-width="4"/>
+          `, '#00FF66');
+
+        case 'killua':
+          return baseSvg(`
+            <!-- Fluffy Spiky Silver Hair -->
+            <polygon points="50,85 30,55 55,58 70,30 90,48 110,30 130,55 155,40 145,85" fill="#FFFFFF" stroke="#000" stroke-width="4"/>
+            <!-- Face -->
+            <ellipse cx="100" cy="108" rx="38" ry="40" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Huge Sharp Electric Blue Eyes -->
+            <ellipse cx="82" cy="104" rx="7" ry="9" fill="#00BFFF" stroke="#000" stroke-width="2.5"/>
+            <circle cx="85" cy="100" r="3" fill="#FFF"/>
+            <ellipse cx="118" cy="104" rx="7" ry="9" fill="#00BFFF" stroke="#000" stroke-width="2.5"/>
+            <circle cx="121" cy="100" r="3" fill="#FFF"/>
+            <!-- Cat-like Smirk -->
+            <path d="M90,128 Q95,124 100,128 Q105,124 110,128" stroke="#000" stroke-width="3" fill="none"/>
+            <!-- Blue Turtleneck & White V-Neck Shirt -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#FFF" stroke="#000" stroke-width="4"/>
+            <rect x="75" y="145" width="50" height="20" fill="#1F3A60" stroke="#000" stroke-width="3"/>
+          `, '#00F0FF');
+
+        case 'captainamerica':
+          return baseSvg(`
+            <!-- Blue Helmet with Wings and 'A' -->
+            <path d="M55,60 Q100,40 145,60 L145,120 Q100,150 55,120 Z" fill="#0044CC" stroke="#000" stroke-width="4"/>
+            <!-- White 'A' -->
+            <text x="100" y="80" font-family="sans-serif" font-weight="900" font-size="28" fill="#FFF" text-anchor="middle">A</text>
+            <!-- White Little Wings on Sides -->
+            <polygon points="45,60 55,75 55,65" fill="#FFF" stroke="#000" stroke-width="2"/>
+            <polygon points="155,60 145,75 145,65" fill="#FFF" stroke="#000" stroke-width="2"/>
+            <!-- Face Cutout -->
+            <polygon points="72,90 128,90 118,140 100,148 82,140" fill="#FFE0BD" stroke="#000" stroke-width="3"/>
+            <ellipse cx="85" cy="102" rx="4" ry="5" fill="#0066CC"/>
+            <ellipse cx="115" cy="102" rx="4" ry="5" fill="#0066CC"/>
+            <line x1="90" y1="128" x2="110" y2="128" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+            <!-- Red & White Striped Suit Shoulders -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#0044CC" stroke="#000" stroke-width="4"/>
+            <line x1="75" y1="175" x2="75" y2="200" stroke="#E60000" stroke-width="6"/>
+            <line x1="90" y1="175" x2="90" y2="200" stroke="#FFF" stroke-width="6"/>
+            <line x1="105" y1="175" x2="105" y2="200" stroke="#E60000" stroke-width="6"/>
+            <line x1="120" y1="175" x2="120" y2="200" stroke="#FFF" stroke-width="6"/>
+          `, '#00F0FF');
+
+        case 'vegeta':
+          return baseSvg(`
+            <!-- Enormous Vertical Flame Black Hair -->
+            <path d="M50,90 L20,30 L55,45 L70,10 L100,25 L130,10 L145,45 L180,30 L150,90 Z" fill="#111" stroke="#000" stroke-width="4"/>
+            <!-- Saiyan Widow's Peak -->
+            <polygon points="65,90 100,70 135,90 120,145 100,154 80,145" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Perma-Scowl Eyebrows -->
+            <polygon points="72,98 96,106 94,96" fill="#111" stroke="#000" stroke-width="2"/>
+            <polygon points="128,98 104,106 106,96" fill="#111" stroke="#000" stroke-width="2"/>
+            <!-- Piercing Eyes -->
+            <circle cx="86" cy="108" r="3.5" fill="#000"/>
+            <circle cx="114" cy="108" r="3.5" fill="#000"/>
+            <!-- Royal Saiyan Smirk -->
+            <path d="M90,132 Q105,138 116,128" stroke="#000" stroke-width="3.5" fill="none"/>
+            <!-- Saiyan Battle Armor with White Straps -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#003399" stroke="#000" stroke-width="4"/>
+            <rect x="70" y="152" width="60" height="48" fill="#FFF" stroke="#000" stroke-width="3"/>
+            <line x1="70" y1="176" x2="130" y2="176" stroke="#FFCC00" stroke-width="5"/>
+          `, '#003399');
+
+        case 'light':
+          return baseSvg(`
+            <!-- Neat Brown Anime Hair with Parted Bangs -->
+            <path d="M50,95 Q45,45 100,42 Q155,45 150,95 Q130,60 100,60 Q70,60 50,95 Z" fill="#8B5A2B" stroke="#000" stroke-width="4"/>
+            <polygon points="90,60 95,85 105,60" fill="#8B5A2B" stroke="#000" stroke-width="2"/>
+            <!-- Elegant Face -->
+            <polygon points="70,85 130,85 118,145 100,154 82,145" fill="#FFF0E0" stroke="#000" stroke-width="4"/>
+            <!-- Ominous Red Kira Glint Eyes -->
+            <polygon points="76,102 96,96 90,108" fill="#FFF" stroke="#000" stroke-width="2"/>
+            <circle cx="86" cy="102" r="3" fill="#C0392B"/>
+            <polygon points="124,102 104,96 110,108" fill="#FFF" stroke="#000" stroke-width="2"/>
+            <circle cx="114" cy="102" r="3" fill="#C0392B"/>
+            <!-- Subtle Sinister Smile -->
+            <path d="M90,130 Q100,138 112,128" stroke="#000" stroke-width="3" fill="none"/>
+            <!-- High School / Detective Suit & Red Tie -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#C29B38" stroke="#000" stroke-width="4"/>
+            <polygon points="100,152 94,195 100,200 106,195" fill="#900" stroke="#000" stroke-width="2"/>
+          `, '#FF0055');
+
+        case 'llawliet':
+          return baseSvg(`
+            <!-- Wild Jet-Black Shaggy Hair -->
+            <polygon points="50,90 30,55 55,50 65,25 90,45 110,25 125,50 150,45 145,90" fill="#111" stroke="#000" stroke-width="4"/>
+            <!-- Pale Face -->
+            <ellipse cx="100" cy="108" rx="38" ry="40" fill="#FFF9F5" stroke="#000" stroke-width="4"/>
+            <!-- Huge Dark Eye Rings / Bags -->
+            <circle cx="82" cy="104" r="10" fill="none" stroke="#666" stroke-width="3"/>
+            <ellipse cx="82" cy="104" rx="4" ry="6" fill="#000"/>
+            <circle cx="82" cy="104" r="12" fill="none" stroke="#222" stroke-width="2" opacity="0.3"/>
+            <circle cx="118" cy="104" r="10" fill="none" stroke="#666" stroke-width="3"/>
+            <ellipse cx="118" cy="104" rx="4" ry="6" fill="#000"/>
+            <!-- Thumb to Lip pose -->
+            <ellipse cx="100" cy="130" rx="6" ry="3" fill="#FFC0CB"/>
+            <path d="M100,125 Q95,140 85,150" stroke="#000" stroke-width="3.5" fill="none"/>
+            <!-- Plain White Long Sleeve Shirt -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#FFF" stroke="#000" stroke-width="4"/>
+          `, '#00F0FF');
+
+        case 'law':
+          return baseSvg(`
+            <!-- White Spotted Fur Hat -->
+            <ellipse cx="100" cy="65" rx="55" ry="26" fill="#FFF" stroke="#000" stroke-width="4"/>
+            <path d="M60,65 Q100,30 140,65 Z" fill="#FFF" stroke="#000" stroke-width="4"/>
+            <!-- Brown Spots -->
+            <circle cx="80" cy="55" r="4" fill="#3E2723"/>
+            <circle cx="115" cy="50" r="5" fill="#3E2723"/>
+            <circle cx="100" cy="65" r="4" fill="#3E2723"/>
+            <!-- Goatee & Sideburns -->
+            <ellipse cx="100" cy="108" rx="38" ry="40" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <polygon points="95,140 100,152 105,140" fill="#111"/>
+            <!-- Piercing Dark Eyes with Shadow -->
+            <ellipse cx="82" cy="102" rx="5" ry="4" fill="#111"/>
+            <ellipse cx="118" cy="102" rx="5" ry="4" fill="#111"/>
+            <!-- Gold Hoop Earrings -->
+            <circle cx="58" cy="115" r="3.5" fill="none" stroke="#FFCC00" stroke-width="2.5"/>
+            <circle cx="142" cy="115" r="3.5" fill="none" stroke="#FFCC00" stroke-width="2.5"/>
+            <!-- Yellow Hoodie / Black Coat with Jolly Roger -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#1C2833" stroke="#000" stroke-width="4"/>
+            <circle cx="100" cy="180" r="10" fill="#FFCC00" stroke="#000" stroke-width="2"/>
+          `, '#FFE600');
+
+        case 'drstrange':
+          return baseSvg(`
+            <!-- Slick Hair with White Temples -->
+            <path d="M55,90 Q50,45 100,42 Q150,45 145,90 Q120,60 100,60 Q80,60 55,90 Z" fill="#1A1A1A" stroke="#000" stroke-width="4"/>
+            <path d="M55,85 L65,70" stroke="#FFF" stroke-width="4" stroke-linecap="round"/>
+            <path d="M145,85 L135,70" stroke="#FFF" stroke-width="4" stroke-linecap="round"/>
+            <!-- Refined Face with Goatee -->
+            <polygon points="70,85 130,85 118,145 100,154 82,145" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <path d="M92,130 Q100,136 108,130 M97,138 L100,148 L103,138" stroke="#000" stroke-width="2.5" fill="#111"/>
+            <ellipse cx="84" cy="102" rx="4" ry="5" fill="#2E7D32"/>
+            <ellipse cx="116" cy="102" rx="4" ry="5" fill="#2E7D32"/>
+            <!-- High Red Cloak of Levitation Collar -->
+            <polygon points="40,110 55,152 35,152" fill="#C0392B" stroke="#000" stroke-width="3"/>
+            <polygon points="160,110 145,152 165,152" fill="#C0392B" stroke="#000" stroke-width="3"/>
+            <!-- Eye of Agamotto Amulet -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#1B4F72" stroke="#000" stroke-width="4"/>
+            <ellipse cx="100" cy="170" rx="12" ry="8" fill="#F1C40F" stroke="#000" stroke-width="3"/>
+            <circle cx="100" cy="170" r="3" fill="#2ECC71"/>
+          `, '#A020F0');
+
+        case 'punisher':
+          return baseSvg(`
+            <!-- Crew Cut Black Hair -->
+            <rect x="65" y="55" width="70" height="28" rx="6" fill="#111" stroke="#000" stroke-width="4"/>
+            <!-- Heavy Rugged Square Jaw -->
+            <polygon points="65,80 135,80 125,145 100,155 75,145" fill="#E0A985" stroke="#000" stroke-width="4"/>
+            <!-- Cold Heavy Eyes -->
+            <line x1="75" y1="96" x2="94" y2="98" stroke="#000" stroke-width="4"/>
+            <ellipse cx="85" cy="102" rx="3" ry="4" fill="#000"/>
+            <line x1="125" y1="96" x2="106" y2="98" stroke="#000" stroke-width="4"/>
+            <ellipse cx="115" cy="102" rx="3" ry="4" fill="#000"/>
+            <line x1="88" y1="130" x2="112" y2="130" stroke="#000" stroke-width="3.5"/>
+            <!-- Black Tactical Vest with Giant White Skull -->
+            <path d="M40,152 L160,152 L170,200 L30,200 Z" fill="#111" stroke="#000" stroke-width="4"/>
+            <!-- Stylized Skull -->
+            <ellipse cx="100" cy="170" rx="18" ry="12" fill="#FFF" stroke="#000" stroke-width="2"/>
+            <rect x="90" y="182" width="5" height="15" fill="#FFF"/>
+            <rect x="98" y="182" width="5" height="15" fill="#FFF"/>
+            <rect x="106" y="182" width="5" height="15" fill="#FFF"/>
+            <circle cx="94" cy="170" r="3" fill="#000"/>
+            <circle cx="106" cy="170" r="3" fill="#000"/>
+          `, '#FFE600');
+
+        case 'spike':
+          return baseSvg(`
+            <!-- Voluminous Dark Green Fluffy Hair -->
+            <path d="M45,95 Q35,40 100,30 Q165,40 155,95 Q170,120 145,130 Q130,55 100,60 Q70,55 55,130 Q30,120 45,95 Z" fill="#1E3F20" stroke="#000" stroke-width="4"/>
+            <!-- Lean Face -->
+            <polygon points="70,85 130,85 118,145 100,154 82,145" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- One Real Eye, One Artificial Eye -->
+            <ellipse cx="84" cy="104" rx="4" ry="5" fill="#5D4037"/>
+            <ellipse cx="116" cy="104" rx="4" ry="5" fill="#795548" stroke="#A1887F" stroke-width="1.5"/>
+            <!-- Cigarette in Mouth -->
+            <line x1="102" y1="130" x2="132" y2="126" stroke="#FFF" stroke-width="4"/>
+            <rect x="130" y="124" width="4" height="4" fill="#FF5722"/>
+            <!-- Blue Leisure Suit with Yellow Shirt -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#1A365D" stroke="#000" stroke-width="4"/>
+            <polygon points="100,152 82,200 118,200" fill="#F1C40F" stroke="#000" stroke-width="3"/>
+          `, '#00F0FF');
+
+        case 'deku':
+          return baseSvg(`
+            <!-- Bushy Dark Green Hair -->
+            <polygon points="50,85 30,55 55,55 65,30 90,45 110,30 135,55 160,45 145,85" fill="#196F3D" stroke="#000" stroke-width="4"/>
+            <!-- Round Face with Freckles -->
+            <ellipse cx="100" cy="110" rx="38" ry="40" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Four Freckles on Cheeks -->
+            <circle cx="75" cy="115" r="1.5" fill="#000"/><circle cx="78" cy="118" r="1.5" fill="#000"/>
+            <circle cx="122" cy="115" r="1.5" fill="#000"/><circle cx="125" cy="118" r="1.5" fill="#000"/>
+            <!-- Large Innocent Green Anime Eyes -->
+            <ellipse cx="82" cy="104" rx="8" ry="10" fill="#27AE60" stroke="#000" stroke-width="3"/>
+            <circle cx="85" cy="100" r="3" fill="#FFF"/>
+            <ellipse cx="118" cy="104" rx="8" ry="10" fill="#27AE60" stroke="#000" stroke-width="3"/>
+            <circle cx="121" cy="100" r="3" fill="#FFF"/>
+            <!-- Green Hero Costume Collar with Metal Respirator Teeth -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#1E8449" stroke="#000" stroke-width="4"/>
+            <rect x="75" y="142" width="50" height="20" rx="4" fill="#BDC3C7" stroke="#000" stroke-width="3"/>
+            <line x1="88" y1="145" x2="88" y2="160" stroke="#111" stroke-width="2"/>
+            <line x1="100" y1="145" x2="100" y2="160" stroke="#111" stroke-width="2"/>
+            <line x1="112" y1="145" x2="112" y2="160" stroke="#111" stroke-width="2"/>
+          `, '#00FF66');
+
+        case 'nightwing':
+          return baseSvg(`
+            <!-- Acrobatic Flowing Black Hair -->
+            <path d="M55,90 Q50,45 100,42 Q150,45 145,90 Q120,60 100,62 Q80,60 55,90 Z" fill="#111" stroke="#000" stroke-width="4"/>
+            <!-- Handsome Face -->
+            <polygon points="70,85 130,85 118,145 100,154 82,145" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Winged Domino Mask -->
+            <polygon points="62,96 85,92 100,98 115,92 138,96 122,108 100,102 78,108" fill="#111" stroke="#000" stroke-width="2.5"/>
+            <ellipse cx="84" cy="100" rx="4" ry="3" fill="#FFF"/>
+            <ellipse cx="116" cy="100" rx="4" ry="3" fill="#FFF"/>
+            <path d="M88,128 Q100,136 112,128" stroke="#000" stroke-width="3" fill="none"/>
+            <!-- Black Suit with Vibrant Cyan Bird Emblem across Chest -->
+            <path d="M40,152 L160,152 L170,200 L30,200 Z" fill="#111" stroke="#000" stroke-width="4"/>
+            <polygon points="100,165 135,152 145,165 100,185 55,165 65,152" fill="#00F0FF" stroke="#000" stroke-width="2.5"/>
+          `, '#00F0FF');
+
+        case 'flash':
+          return baseSvg(`
+            <!-- Crimson Cowl with Golden Lightning Ear Wings -->
+            <path d="M55,60 Q100,40 145,60 L145,120 Q100,150 55,120 Z" fill="#E50000" stroke="#000" stroke-width="4"/>
+            <!-- Lightning Wings on Ears -->
+            <polygon points="45,90 30,75 52,82" fill="#FFCC00" stroke="#000" stroke-width="2"/>
+            <polygon points="155,90 170,75 148,82" fill="#FFCC00" stroke="#000" stroke-width="2"/>
+            <!-- Face Cutout -->
+            <polygon points="72,90 128,90 118,140 100,148 82,140" fill="#FFE0BD" stroke="#000" stroke-width="3"/>
+            <ellipse cx="85" cy="102" rx="4" ry="5" fill="#0066CC"/>
+            <ellipse cx="115" cy="102" rx="4" ry="5" fill="#0066CC"/>
+            <path d="M88,126 Q100,134 112,126" stroke="#000" stroke-width="3" fill="none"/>
+            <!-- Crimson Suit with Lightning Circle Bolt -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#E50000" stroke="#000" stroke-width="4"/>
+            <circle cx="100" cy="180" r="14" fill="#FFF" stroke="#000" stroke-width="2.5"/>
+            <polygon points="102,168 94,180 100,180 98,192 106,180 100,180" fill="#FFCC00" stroke="#000" stroke-width="2"/>
+          `, '#FFE600');
+
+        case 'wonderwoman':
+          return baseSvg(`
+            <!-- Flowing Black Hair with Golden Tiara & Red Star -->
+            <path d="M40,110 Q35,45 100,38 Q165,45 160,110 Q160,145 145,150 M40,110 Q40,145 55,150" fill="#111" stroke="#000" stroke-width="4"/>
+            <!-- Golden Tiara -->
+            <polygon points="62,70 100,85 138,70 125,58 100,64 75,58" fill="#FFD700" stroke="#000" stroke-width="3"/>
+            <polygon points="100,68 102,74 108,74 104,78 106,84 100,80 94,84 96,78 92,74 98,74" fill="#E74C3C"/>
+            <!-- Face -->
+            <ellipse cx="100" cy="108" rx="38" ry="40" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <ellipse cx="84" cy="104" rx="5" ry="6" fill="#2980B9"/>
+            <ellipse cx="116" cy="104" rx="5" ry="6" fill="#2980B9"/>
+            <!-- Red Armor with Golden Eagle Eagle/W Crest -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#C0392B" stroke="#000" stroke-width="4"/>
+            <path d="M70,165 Q100,185 130,165 L125,178 Q100,195 75,178 Z" fill="#FFD700" stroke="#000" stroke-width="2.5"/>
+          `, '#FF0055');
+
+        case 'magneto':
+          return baseSvg(`
+            <!-- Crimson Helmet with Purple Crest Trim -->
+            <path d="M55,60 Q100,35 145,60 L145,125 Q100,155 55,125 Z" fill="#900C3F" stroke="#000" stroke-width="4"/>
+            <path d="M70,75 Q100,65 130,75 L125,130 Q100,145 75,130 Z" fill="none" stroke="#6C3483" stroke-width="5"/>
+            <!-- Face Cutout with Cold Aging Warrior Gaze -->
+            <polygon points="76,88 124,88 116,135 100,142 84,135" fill="#FFE0BD" stroke="#000" stroke-width="3"/>
+            <line x1="82" y1="98" x2="94" y2="100" stroke="#000" stroke-width="3"/>
+            <circle cx="88" cy="104" r="2.5" fill="#000"/>
+            <line x1="118" y1="98" x2="106" y2="100" stroke="#000" stroke-width="3"/>
+            <circle cx="112" cy="104" r="2.5" fill="#000"/>
+            <line x1="90" y1="124" x2="110" y2="124" stroke="#000" stroke-width="3"/>
+            <!-- Crimson Armor with Purple Cape -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#900C3F" stroke="#000" stroke-width="4"/>
+            <polygon points="45,152 70,200 40,200" fill="#6C3483"/>
+            <polygon points="155,152 130,200 160,200" fill="#6C3483"/>
+          `, '#A020F0');
+
+        case 'erwin':
+          return baseSvg(`
+            <!-- Classic Parted Blonde Commander Hair -->
+            <path d="M55,85 Q50,45 100,42 Q150,45 145,85 Q125,60 100,60 Q75,60 55,85 Z" fill="#F4D03F" stroke="#000" stroke-width="4"/>
+            <!-- Monumental Eyebrows (Erwin's Trademark!) -->
+            <polygon points="68,85 132,85 120,145 100,154 80,145" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <rect x="74" y="92" width="22" height="7" fill="#111" stroke="#000" stroke-width="2"/>
+            <rect x="104" y="92" width="22" height="7" fill="#111" stroke="#000" stroke-width="2"/>
+            <!-- Steel Blue Eyes -->
+            <circle cx="85" cy="105" r="3.5" fill="#2980B9"/>
+            <circle cx="115" cy="105" r="3.5" fill="#2980B9"/>
+            <!-- Survey Corps Bolo Tie & Green Cape -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#1E8449" stroke="#000" stroke-width="4"/>
+            <circle cx="100" cy="170" r="7" fill="#2ECC71" stroke="#000" stroke-width="2"/>
+          `, '#00FF66');
+
+        case 'lelouch':
+          return baseSvg(`
+            <!-- Sharp Anime Black Hair Framing Face -->
+            <polygon points="50,85 35,50 60,50 75,25 95,45 115,25 130,50 155,45 145,85" fill="#111" stroke="#000" stroke-width="4"/>
+            <polygon points="70,85 130,85 118,145 100,154 82,145" fill="#FFF0E0" stroke="#000" stroke-width="4"/>
+            <!-- Left Eye Normal Violet / Right Eye Flaming Red Geass Bird -->
+            <ellipse cx="84" cy="104" rx="5" ry="6" fill="#8E44AD"/>
+            <ellipse cx="116" cy="104" rx="6" ry="7" fill="#E74C3C" stroke="#C0392B" stroke-width="2"/>
+            <!-- Geass Sigil in Right Eye -->
+            <path d="M112,104 Q116,98 120,104 Q116,108 112,104 Z" fill="#FFCC00"/>
+            <!-- High Zero Black Collar with Gold Trim -->
+            <polygon points="40,120 55,160 35,160" fill="#1A1A2E" stroke="#000" stroke-width="3"/>
+            <polygon points="160,120 145,160 165,160" fill="#1A1A2E" stroke="#000" stroke-width="3"/>
+            <path d="M45,160 L155,160 L165,200 L35,200 Z" fill="#1A1A2E" stroke="#000" stroke-width="4"/>
+            <circle cx="100" cy="180" r="8" fill="#F1C40F"/>
+          `, '#A020F0');
+
+        case 'optimus':
+          return baseSvg(`
+            <!-- Blue Autobot Helm with Forehead Crest & Ear Antennae -->
+            <path d="M50,55 L100,30 L150,55 L145,130 L100,150 L55,130 Z" fill="#0B5394" stroke="#000" stroke-width="4"/>
+            <rect x="42" y="30" width="8" height="50" fill="#76A5AF" stroke="#000" stroke-width="2.5"/>
+            <rect x="150" y="30" width="8" height="50" fill="#76A5AF" stroke="#000" stroke-width="2.5"/>
+            <!-- Glowing Cyan Optics -->
+            <rect x="74" y="80" width="20" height="10" rx="2" fill="#00FFFF" stroke="#000" stroke-width="2.5"/>
+            <rect x="106" y="80" width="20" height="10" rx="2" fill="#00FFFF" stroke="#000" stroke-width="2.5"/>
+            <!-- Silver Faceplate -->
+            <polygon points="70,100 130,100 120,140 100,148 80,140" fill="#BDC3C7" stroke="#000" stroke-width="3.5"/>
+            <line x1="85" y1="115" x2="115" y2="115" stroke="#000" stroke-width="2.5"/>
+            <line x1="85" y1="125" x2="115" y2="125" stroke="#000" stroke-width="2.5"/>
+            <!-- Red Chest with Windows -->
+            <path d="M40,150 L160,150 L170,200 L30,200 Z" fill="#CC0000" stroke="#000" stroke-width="4"/>
+            <rect x="65" y="160" width="30" height="24" fill="#00FFFF" stroke="#000" stroke-width="3"/>
+            <rect x="105" y="160" width="30" height="24" fill="#00FFFF" stroke="#000" stroke-width="3"/>
+          `, '#00F0FF');
+
+        case 'shikamaru':
+          return baseSvg(`
+            <!-- High Spiky Pineapple Ponytail -->
+            <polygon points="90,40 100,10 110,40" fill="#111" stroke="#000" stroke-width="3"/>
+            <circle cx="100" cy="40" r="14" fill="#111"/>
+            <ellipse cx="100" cy="105" rx="38" ry="40" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Lazy Narrowed Slanted Eyes -->
+            <line x1="74" y1="96" x2="94" y2="102" stroke="#000" stroke-width="3.5"/>
+            <ellipse cx="85" cy="104" rx="3" ry="4" fill="#5D4037"/>
+            <line x1="126" y1="96" x2="106" y2="102" stroke="#000" stroke-width="3.5"/>
+            <ellipse cx="115" cy="104" rx="3" ry="4" fill="#5D4037"/>
+            <!-- Silver Stud Earring -->
+            <circle cx="60" cy="115" r="2.5" fill="#BDC3C7" stroke="#000" stroke-width="1.5"/>
+            <!-- Green Chunin Vest -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#275038" stroke="#000" stroke-width="4"/>
+          `, '#00FF66');
+
+        case 'armin':
+          return baseSvg(`
+            <!-- Blonde Bob Cut -->
+            <path d="M55,90 Q45,45 100,42 Q155,45 145,90 Q125,60 100,60 Q75,60 55,90 Z" fill="#F7DC6F" stroke="#000" stroke-width="4"/>
+            <ellipse cx="100" cy="108" rx="38" ry="40" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Big Thoughtful Blue Eyes -->
+            <ellipse cx="82" cy="102" rx="7" ry="8" fill="#3498DB" stroke="#000" stroke-width="2.5"/>
+            <circle cx="85" cy="99" r="2.5" fill="#FFF"/>
+            <ellipse cx="118" cy="102" rx="7" ry="8" fill="#3498DB" stroke="#000" stroke-width="2.5"/>
+            <circle cx="121" cy="99" r="2.5" fill="#FFF"/>
+            <!-- Brown Survey Corps Jacket -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#8B5A2B" stroke="#000" stroke-width="4"/>
+            <polygon points="100,152 90,185 110,185" fill="#FFF" stroke="#000" stroke-width="2"/>
+          `, '#00F0FF');
+
+        case 'thor':
+          return baseSvg(`
+            <!-- Winged Silver Asgardian Helm & Long Blonde Hair -->
+            <path d="M55,95 Q40,55 100,45 Q160,55 145,95 L145,140 M55,95 L55,140" fill="#F4D03F" stroke="#000" stroke-width="4"/>
+            <path d="M60,65 Q100,45 140,65 L135,100 L65,100 Z" fill="#BDC3C7" stroke="#000" stroke-width="3.5"/>
+            <polygon points="45,65 30,40 55,50" fill="#FFF" stroke="#000" stroke-width="2.5"/>
+            <polygon points="155,65 170,40 145,50" fill="#FFF" stroke="#000" stroke-width="2.5"/>
+            <!-- Face & Beard -->
+            <polygon points="70,95 130,95 118,145 100,154 82,145" fill="#FFE0BD" stroke="#000" stroke-width="3.5"/>
+            <path d="M80,125 Q100,150 120,125" stroke="#D4AC0D" stroke-width="6" fill="none"/>
+            <circle cx="86" cy="104" r="3.5" fill="#3498DB"/>
+            <circle cx="114" cy="104" r="3.5" fill="#3498DB"/>
+            <!-- Armored Discs on Chest -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#1C2833" stroke="#000" stroke-width="4"/>
+            <circle cx="75" cy="175" r="10" fill="#BDC3C7" stroke="#000" stroke-width="2.5"/>
+            <circle cx="125" cy="175" r="10" fill="#BDC3C7" stroke="#000" stroke-width="2.5"/>
+          `, '#00F0FF');
+
+        case 'kamina':
+          return baseSvg(`
+            <!-- Wild Indigo Hair & Orange Pointed Boomerang Shades -->
+            <polygon points="50,85 30,45 60,50 80,25 100,40 120,25 140,50 170,45 150,85" fill="#1B4F72" stroke="#000" stroke-width="4"/>
+            <ellipse cx="100" cy="110" rx="38" ry="40" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Iconic Red/Orange Boomerang Glasses -->
+            <polygon points="50,96 100,110 150,96 135,116 100,122 65,116" fill="#FF5722" stroke="#000" stroke-width="3.5"/>
+            <!-- Boastful Grin -->
+            <path d="M82,130 Q100,146 118,130 Z" fill="#FFF" stroke="#000" stroke-width="3"/>
+            <!-- Blue Tribal Tattoos on Bare Chest & Cape -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <path d="M60,165 Q80,180 65,200" stroke="#2980B9" stroke-width="7" fill="none"/>
+            <polygon points="40,152 55,200 35,200" fill="#C0392B"/>
+          `, '#FF6B00');
+
+        case 'sasuke':
+          return baseSvg(`
+            <!-- Ducktail Spiky Black Hair -->
+            <polygon points="55,90 35,55 60,60 70,30 95,45 115,30 130,60 165,55 145,90" fill="#111" stroke="#000" stroke-width="4"/>
+            <polygon points="70,85 130,85 118,145 100,154 82,145" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Left Eye Sharingan (Red with Tomoe) / Right Eye Rinnegan (Purple Circles) -->
+            <circle cx="84" cy="104" r="7" fill="#C0392B" stroke="#000" stroke-width="2"/>
+            <circle cx="84" cy="104" r="2" fill="#000"/>
+            <circle cx="116" cy="104" r="7" fill="#8E44AD" stroke="#000" stroke-width="2"/>
+            <circle cx="116" cy="104" r="4" fill="none" stroke="#2C3E50" stroke-width="1.5"/>
+            <!-- High Collar Shirt -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#1C2833" stroke="#000" stroke-width="4"/>
+            <polygon points="70,140 100,165 130,140 100,152" fill="#FFF" stroke="#000" stroke-width="2.5"/>
+          `, '#A020F0');
+
+        case 'redhood':
+          return baseSvg(`
+            <!-- Sleek Crimson Metallic Full Face Helmet -->
+            <path d="M55,60 Q100,38 145,60 L148,125 Q100,160 52,125 Z" fill="#C0392B" stroke="#000" stroke-width="4"/>
+            <!-- Angular White Glowing Eyes -->
+            <polygon points="72,96 92,94 88,104" fill="#FFF" stroke="#000" stroke-width="2"/>
+            <polygon points="128,96 108,94 112,104" fill="#FFF" stroke="#000" stroke-width="2"/>
+            <!-- Brown Leather Jacket over Body Armor -->
+            <path d="M40,152 L160,152 L170,200 L30,200 Z" fill="#6E2C00" stroke="#000" stroke-width="4"/>
+            <rect x="75" y="152" width="50" height="48" fill="#111" stroke="#000" stroke-width="2.5"/>
+            <!-- Red Bat Insignia -->
+            <polygon points="85,170 100,180 115,170 100,175" fill="#E74C3C"/>
+          `, '#FF0055');
+
+        case 'mustang':
+          return baseSvg(`
+            <!-- Neat Black Military Bangs -->
+            <path d="M55,90 Q50,45 100,42 Q150,45 145,90 Q120,60 100,65 Q80,60 55,90 Z" fill="#111" stroke="#000" stroke-width="4"/>
+            <polygon points="70,85 130,85 118,145 100,154 82,145" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <ellipse cx="84" cy="102" rx="4" ry="5" fill="#111"/>
+            <ellipse cx="116" cy="102" rx="4" ry="5" fill="#111"/>
+            <!-- Confident Smirk -->
+            <path d="M88,128 Q100,136 112,128" stroke="#000" stroke-width="3" fill="none"/>
+            <!-- Amestrian Blue Officer Coat & White Ignition Glove with Flame Circle -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#1B4F72" stroke="#000" stroke-width="4"/>
+            <!-- White Glove with Alchemic Circle -->
+            <circle cx="140" cy="175" r="10" fill="#FFF" stroke="#000" stroke-width="2.5"/>
+            <polygon points="140,168 144,178 136,178" fill="#C0392B"/>
+          `, '#00F0FF');
+
+        case 'rocket':
+          return baseSvg(`
+            <!-- Furry Raccoon Face with Brown/Black Bandit Mask -->
+            <path d="M50,80 L35,45 L65,60 Q100,50 135,60 L165,45 L150,80 Q165,115 145,140 Q100,155 55,140 Z" fill="#7F8C8D" stroke="#000" stroke-width="4"/>
+            <!-- Dark Eye Mask -->
+            <ellipse cx="78" cy="98" rx="16" ry="12" fill="#2C3E50"/>
+            <ellipse cx="122" cy="98" rx="16" ry="12" fill="#2C3E50"/>
+            <circle cx="80" cy="98" r="4" fill="#F39C12"/>
+            <circle cx="120" cy="98" r="4" fill="#F39C12"/>
+            <!-- Cute Snout with Whiskers -->
+            <ellipse cx="100" cy="118" rx="10" ry="7" fill="#BDC3C7" stroke="#000" stroke-width="2"/>
+            <ellipse cx="100" cy="114" rx="4" ry="3" fill="#000"/>
+            <!-- Orange Ravager Spacesuit with Shoulder Straps -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#E67E22" stroke="#000" stroke-width="4"/>
+            <rect x="70" y="160" width="60" height="15" fill="#34495E" stroke="#000" stroke-width="2"/>
+          `, '#FF6B00');
+
+        case 'constantine':
+          return baseSvg(`
+            <!-- Messy Dirty-Blonde Hair -->
+            <polygon points="55,85 40,55 65,60 80,35 100,45 120,35 135,60 160,55 145,85" fill="#F1C40F" stroke="#000" stroke-width="3.5"/>
+            <!-- Stubble & Unshaven Scruff -->
+            <polygon points="70,85 130,85 118,145 100,154 82,145" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <ellipse cx="84" cy="102" rx="4" ry="5" fill="#3498DB"/>
+            <ellipse cx="116" cy="102" rx="4" ry="5" fill="#3498DB"/>
+            <!-- Burning Cigarette -->
+            <line x1="98" y1="130" x2="128" y2="128" stroke="#FFF" stroke-width="4"/>
+            <rect x="126" y="126" width="4" height="4" fill="#E74C3C"/>
+            <!-- Classic Tan Trenchcoat with Loosened Red Tie -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#D4AC0D" stroke="#000" stroke-width="4"/>
+            <polygon points="100,152 92,195 100,200 108,195" fill="#C0392B" stroke="#000" stroke-width="2"/>
+          `, '#FFE600');
+
+        case 'jonathan':
+          return baseSvg(`
+            <!-- Royal Blue Anime Hair with Chivalric Grace -->
+            <path d="M50,90 Q40,45 100,40 Q160,45 150,90 Q130,55 100,60 Q70,55 50,90 Z" fill="#1F618D" stroke="#000" stroke-width="4"/>
+            <!-- Square Noble Aristocratic Jaw -->
+            <polygon points="68,85 132,85 122,145 100,155 78,145" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Large Innocent Heroic Eyes -->
+            <ellipse cx="84" cy="104" rx="6" ry="7" fill="#2ECC71" stroke="#000" stroke-width="2.5"/>
+            <circle cx="86" cy="101" r="2.5" fill="#FFF"/>
+            <ellipse cx="116" cy="104" rx="6" ry="7" fill="#2ECC71" stroke="#000" stroke-width="2.5"/>
+            <circle cx="118" cy="101" r="2.5" fill="#FFF"/>
+            <!-- Hamon Sun Glow Spark -->
+            <circle cx="100" cy="170" r="14" fill="#F1C40F" opacity="0.6"/>
+            <!-- Victorian Vest with Tie -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#5B2C6F" stroke="#000" stroke-width="4"/>
+            <polygon points="100,152 90,185 110,185" fill="#F1C40F" stroke="#000" stroke-width="2"/>
+          `, '#FFE600');
+
+        case 'joseph':
+          return baseSvg(`
+            <!-- Spiky Brown Hair with Pilot Goggles / Headband -->
+            <polygon points="50,80 35,45 60,50 80,25 100,40 120,25 140,50 165,45 150,80" fill="#5D4037" stroke="#000" stroke-width="4"/>
+            <!-- Green-Pink Checker Headband -->
+            <rect x="65" y="70" width="70" height="12" fill="#2ECC71" stroke="#000" stroke-width="2"/>
+            <rect x="75" y="70" width="10" height="12" fill="#E91E63"/>
+            <rect x="95" y="70" width="10" height="12" fill="#E91E63"/>
+            <rect x="115" y="70" width="10" height="12" fill="#E91E63"/>
+            <!-- Trickster Face -->
+            <polygon points="70,85 130,85 118,145 100,154 82,145" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <ellipse cx="84" cy="102" rx="4" ry="5" fill="#16A085"/>
+            <ellipse cx="116" cy="102" rx="4" ry="5" fill="#16A085"/>
+            <!-- Witty Smirk -->
+            <path d="M88,128 Q100,138 114,124" stroke="#000" stroke-width="3" fill="none"/>
+            <!-- Green Scarf & Crop Top Vest -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#27AE60" stroke="#000" stroke-width="4"/>
+            <rect x="65" y="145" width="70" height="20" rx="4" fill="#9B59B6" stroke="#000" stroke-width="2.5"/>
+          `, '#00FF66');
+
+        case 'professorx':
+          return baseSvg(`
+            <!-- Bald Intellect Dome with Cerebro Telepathic Waves -->
+            <ellipse cx="100" cy="95" rx="44" ry="50" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Telepathic Psychic Ripples -->
+            <path d="M60,60 Q100,30 140,60" fill="none" stroke="#00F0FF" stroke-width="3" stroke-dasharray="4,4"/>
+            <path d="M50,45 Q100,15 150,45" fill="none" stroke="#00F0FF" stroke-width="3" stroke-dasharray="4,4"/>
+            <!-- Wise Calm Eyes -->
+            <line x1="74" y1="90" x2="94" y2="92" stroke="#000" stroke-width="3"/>
+            <ellipse cx="84" cy="98" rx="4" ry="4" fill="#2E4053"/>
+            <line x1="126" y1="90" x2="106" y2="92" stroke="#000" stroke-width="3"/>
+            <ellipse cx="116" cy="98" rx="4" ry="4" fill="#2E4053"/>
+            <!-- Professional Suit & Striped Tie -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#2C3E50" stroke="#000" stroke-width="4"/>
+            <polygon points="100,152 92,195 100,200 108,195" fill="#3498DB" stroke="#000" stroke-width="2"/>
+          `, '#00F0FF');
+
+        case 'winry':
+          return baseSvg(`
+            <!-- Blonde Ponytail with Dark Green Bandana -->
+            <path d="M50,85 Q45,45 100,42 Q155,45 150,85" fill="#F7DC6F" stroke="#000" stroke-width="4"/>
+            <rect x="60" y="65" width="80" height="20" rx="3" fill="#1E8449" stroke="#000" stroke-width="3"/>
+            <!-- Cheerful Face -->
+            <ellipse cx="100" cy="110" rx="38" ry="40" fill="#FFE0BD" stroke="#000" stroke-width="4"/>
+            <!-- Bright Blue Eyes -->
+            <ellipse cx="82" cy="104" rx="7" ry="8" fill="#3498DB" stroke="#000" stroke-width="2.5"/>
+            <circle cx="85" cy="101" r="2.5" fill="#FFF"/>
+            <ellipse cx="118" cy="104" rx="7" ry="8" fill="#3498DB" stroke="#000" stroke-width="2.5"/>
+            <circle cx="121" cy="101" r="2.5" fill="#FFF"/>
+            <!-- Tube Top with Wrench in Hand -->
+            <path d="M45,152 L155,152 L165,200 L35,200 Z" fill="#111" stroke="#000" stroke-width="4"/>
+            <!-- Metal Wrench Icon -->
+            <rect x="135" y="145" width="8" height="35" fill="#BDC3C7" stroke="#000" stroke-width="2" transform="rotate(30 135 145)"/>
+          `, '#00FF66');
+
+        default:
+          // Generic Dynamic Cartoon Avatar with Character Initials
+          const initials = charId.substring(0, 2).toUpperCase();
+          return baseSvg(`
+            <circle cx="100" cy="100" r="50" fill="#FFF" stroke="#000" stroke-width="5"/>
+            <circle cx="80" cy="90" r="8" fill="#000"/>
+            <circle cx="120" cy="90" r="8" fill="#000"/>
+            <path d="M80,120 Q100,140 120,120" stroke="#000" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <rect x="70" y="140" width="60" height="24" rx="6" fill="#111"/>
+            <text x="100" y="157" font-family="sans-serif" font-weight="900" font-size="14" fill="#FFE600" text-anchor="middle">${initials}</text>
+          `, '#FFE600');
+      }
+    }
+  </script>
+
+  <script>
+    /*
+     * 50 MULTIVERSE CHARACTERS DATABASE
+     * Trait coordinates:
+     * drive: -100 (Idealist) to +100 (Realist)
+     * social: -100 (Empath) to +100 (Maverick)
+     * execution: -100 (Strategist) to +100 (Instinctive)
+     * morality: -100 (Paragon) to +100 (Rebel)
+     */
+    const CHARACTERS = [
+      // 1. The Vanguard Protectors
+      { id: "superman", name: "Superman", alias: "Clark Kent • Kal-El", universe: "DC Comics", category: "superhero", archetype: "The Solar Paragon", quote: "There is a right and a wrong in the universe, and that distinction is not so hard to make.", synopsis: "You possess an unyielding moral compass. Even when holding supreme leverage, your instinct is to shield the vulnerable and believe in humanity's best.", strengths: "Moral clarity, deep optimism, unwavering protective resilience.", blindspot: "Susceptible to deception by enemies who exploit your inherent mercy.", traits: { drive: -95, social: -80, execution: -30, morality: -95 } },
+      { id: "captainamerica", name: "Captain America", alias: "Steve Rogers • The First Avenger", universe: "Marvel Comics", category: "superhero", archetype: "The Incorruptible Sentinel", quote: "I don't like bullies; I don't care where they're from.", synopsis: "You stand firm against tyranny no matter how isolated you are. You inspire through moral conviction rather than fear.", strengths: "Unyielding leadership, combat heart, principled defiance.", blindspot: "Struggles when compromise is necessary to avoid greater tragedies.", traits: { drive: -95, social: -85, execution: -50, morality: -90 } },
+      { id: "allmight", name: "All Might", alias: "Toshinori Yagi • Symbol of Peace", universe: "My Hero Academia", category: "anime", archetype: "The Pillar of Hope", quote: "It's fine now. Why? Because I am here!", synopsis: "You smile not out of arrogance, but because fear has no place around people who look to you for salvation. A radiant, selfless inspiration.", strengths: "Magnetic leadership, sheer physical resolve, limitless bravery.", blindspot: "Conceals critical vulnerabilities until near total collapse.", traits: { drive: -90, social: -85, execution: -10, morality: -95 } },
+      { id: "tanjiro", name: "Tanjiro Kamado", alias: "Sun-Breathing Demon Slayer", universe: "Demon Slayer", category: "anime", archetype: "The Compassionate Blade", quote: "I will never give up! Even if I am in pain, I will push through!", synopsis: "Even when severing the heads of demons, you honor their sorrow. You pair razor discipline with boundless gentleness.", strengths: "Boundless empathy, unbreakable discipline, clear moral instinct.", blindspot: "Hesitation born of empathy in situations demanding cold detachment.", traits: { drive: -90, social: -80, execution: -20, morality: -90 } },
+      { id: "spiderman", name: "Spider-Man", alias: "Peter Parker • Web-Slinger", universe: "Marvel Comics", category: "superhero", archetype: "The Everyman Paragon", quote: "With great power there must also come great responsibility.", synopsis: "Duty and compassion compel you to shoulder personal sacrifice. You use humor under fire to hide the anxiety of trying to save every innocent.", strengths: "Relentless persistence, genuine humor, grassroots empathy.", blindspot: "Chronic self-sacrifice and personal burnout from guilt.", traits: { drive: -85, social: -75, execution: 20, morality: -90 } },
+      { id: "jonathan", name: "Jonathan Joestar", alias: "JoJo (Part 1) • First Hamon Master", universe: "JoJo's Bizarre Adventure", category: "anime", archetype: "The True Gentleman", quote: "Even if I die, my spirit will live on with you!", synopsis: "A soul of aristocratic chivalry, solar Hamon, and limitless grace. You honor even your bitterest enemies with your final breath.", strengths: "Chivalrous code, incorruptible spirit, raw physical power.", blindspot: "Nobility so pure that you underestimate the utter depravity of tyrants.", traits: { drive: -100, social: -80, execution: 10, morality: -100 } },
+
+      // 2. The Fierce Trailblazers
+      { id: "luffy", name: "Monkey D. Luffy", alias: "Straw Hat • Future Pirate King", universe: "One Piece", category: "anime", archetype: "The Liberator of Freedom", quote: "If you don't take risks, you can't create a future!", synopsis: "You mock tyrannical authority, fight solely for your crew's dreams, and rely on sheer gut instinct and laughter in the face of doom.", strengths: "Unshakable loyalty, total fearlessness, instinctual combat flow.", blindspot: "Detests strategic planning; leaps into catastrophic danger headfirst.", traits: { drive: -60, social: -90, execution: 95, morality: 75 } },
+      { id: "naruto", name: "Naruto Uzumaki", alias: "The Seventh Hokage", universe: "Naruto", category: "anime", archetype: "The Unyielding Catalyst", quote: "I'm not gonna run away, I never go back on my word! That's my nindo!", synopsis: "You turn isolation into an engine of communal empathy. You refuse to give up on friends even when the entire world declares them past redemption.", strengths: "Unmatched tenacity, power to inspire reformation in foes, heart.", blindspot: "Stubborn headlong charges and emotional overcommitment.", traits: { drive: -85, social: -85, execution: 60, morality: -60 } },
+      { id: "goku", name: "Son Goku", alias: "Kakarot • Earth's Defender", universe: "Dragon Ball", category: "anime", archetype: "The Limitless Warrior", quote: "Power comes in response to a need, not a desire.", synopsis: "Driven by the pure thrill of self-transcendence. You meet cosmic threats with playful innocence and ferocity when comrades are threatened.", strengths: "Limitless physical evolution, pure heart, fearless adaptability.", blindspot: "Dangerously trusting; grants rematches to lethal warlords.", traits: { drive: -40, social: -60, execution: 85, morality: -40 } },
+      { id: "kamina", name: "Kamina", alias: "The Mighty Bro", universe: "Gurren Lagann", category: "anime", archetype: "The Cosmic Provocateur", quote: "Believe in the me that believes in you!", synopsis: "You shatter universal limits through swagger, brotherhood, and raw bravado. Logic is something to punch through on the path to glory.", strengths: "Electrifying morale-booster, supreme charisma, zero hesitation.", blindspot: "Refuses strategic retreats even when tactical survival demands it.", traits: { drive: -70, social: -75, execution: 90, morality: 60 } },
+      { id: "thor", name: "Thor Odinson", alias: "God of Thunder", universe: "Marvel Comics", category: "superhero", archetype: "The Thunderous Noble", quote: "I would rather be a good man than a great king.", synopsis: "A warrior-god who values camaraderie, valor, and celebration. You summon storms against tyrants and defend realms without fear.", strengths: "Noble powerhouse, fearless loyalty, thunderous resolve.", blindspot: "Pride and impatience with subtle political scheming.", traits: { drive: -50, social: -50, execution: 55, morality: -70 } },
+      { id: "denji", name: "Denji", alias: "Chainsaw Man", universe: "Chainsaw Man", category: "anime", archetype: "The Visceral Pragmatist", quote: "If there's a hell, I'm dragging all of you down with me!", synopsis: "You don't care about grand cosmic speeches. You want good food, basic warmth, and simple peace—and you will saw demons to pieces to keep them.", strengths: "Raw grit, unpredictable fighting ferocity, immune to pretentious gaslighting.", blindspot: "Easily swayed by anyone offering basic affection.", traits: { drive: 80, social: 30, execution: 95, morality: 50 } },
+
+      // 3. The Visionary Architects
+      { id: "professorx", name: "Professor X", alias: "Charles Xavier", universe: "Marvel Comics", category: "superhero", archetype: "The Diplomatic Visionary", quote: "Just because someone stumbles and loses their path doesn't mean they're lost forever.", synopsis: "You believe intellectual dialogue and education can bridge the deepest hatreds. You mentor generations and craft long-term peace.", strengths: "Supreme intellect, visionary patience, deep empathy.", blindspot: "Paternalistic control; prone to secret moral compromises.", traits: { drive: -90, social: -70, execution: -85, morality: -80 } },
+      { id: "erwin", name: "Erwin Smith", alias: "Commander of the Survey Corps", universe: "Attack on Titan", category: "anime", archetype: "The Grand Gambler", quote: "My soldiers, rage! My soldiers, scream! My soldiers, fight!", synopsis: "You wager your soul and the lives of battalions for the survival of humanity and the revelation of truth. A leader who accepts monstrous weights.", strengths: "Unmatched tactical foresight, hypnotic oratory, iron resolve.", blindspot: "Tortured by survivor's guilt and secretive personal obsessions.", traits: { drive: -20, social: 20, execution: -95, morality: 30 } },
+      { id: "lelouch", name: "Lelouch vi Britannia", alias: "Zero", universe: "Code Geass", category: "anime", archetype: "The Checkmate Sovereign", quote: "The only ones who should kill are those who are prepared to be killed.", synopsis: "Revolution is your 11-dimensional chessboard. You play the role of the ultimate villain to forge a peaceful tomorrow for those you love.", strengths: "Supreme stratagem, psychological warfare, dramatic charisma.", blindspot: "Hubris and vulnerability to catastrophic emotional miscalculations.", traits: { drive: -30, social: 50, execution: -100, morality: 80 } },
+      { id: "optimus", name: "Optimus Prime", alias: "Autobot Commander", universe: "Transformers", category: "superhero", archetype: "The Timeless Pillar", quote: "Freedom is the right of all sentient beings.", synopsis: "You endure millennia of war without souring into bitterness. You protect the fragile and offer mercy even to those who betray your trust.", strengths: "Unshakable integrity, paternal wisdom, indomitable combat leadership.", blindspot: "Repeated mercy given to enemies who only rearm for slaughter.", traits: { drive: -95, social: -75, execution: -60, morality: -95 } },
+      { id: "shikamaru", name: "Shikamaru Nara", alias: "The Cloud Watcher", universe: "Naruto", category: "anime", archetype: "The Reluctant Grandmaster", quote: "What a drag... but I guess I have no choice.", synopsis: "You want a simple, quiet life, but your 200 IQ strategic intellect thrusts you into commanding operations whenever danger threatens your allies.", strengths: "Genius battlefield foresight, composed under pressure, profound loyalty.", blindspot: "Initial apathy; tends to dismiss critical problems as 'a drag'.", traits: { drive: 30, social: -30, execution: -95, morality: -40 } },
+      { id: "armin", name: "Armin Arlert", alias: "The Colossal Strategist", universe: "Attack on Titan", category: "anime", archetype: "The Compassionate Mind", quote: "To surpass monsters, you must be willing to abandon your humanity.", synopsis: "You seek mutual understanding and see wonder in simple things, yet under crisis you formulate harrowing plans to ensure collective survival.", strengths: "Analytical breakthrough capability, diplomatic empathy, moral depth.", blindspot: "Debilitating self-doubt and crippling remorse over sacrifice.", traits: { drive: -60, social: -60, execution: -90, morality: -20 } },
+
+      // 4. The Tactical Shadows
+      { id: "batman", name: "Batman", alias: "Bruce Wayne • The Dark Knight", universe: "DC Comics", category: "superhero", archetype: "The Tactical Architect", quote: "It's not who I am underneath, but what I do that defines me.", synopsis: "You master chaos through paranoia, rigorous preparation, and contingency planning. You carry psychological burdens alone so others don't have to.", strengths: "Tactical genius, absolute mental fortitude, contingency readiness.", blindspot: "Pervasive distrust; struggles to open up to closest allies.", traits: { drive: 45, social: 85, execution: -95, morality: -30 } },
+      { id: "levi", name: "Levi Ackerman", alias: "Humanity's Strongest Soldier", universe: "Attack on Titan", category: "anime", archetype: "The Blade of Clean Resolve", quote: "The only thing we're allowed to do is believe that we won't regret the choice we made.", synopsis: "Blunt, clean-obsessed, and ruthlessly precise. You don't waste breath on sentimental laments; you execute the mission and carry dying wills.", strengths: "Elite physical precision, unflinching composure, fierce quiet loyalty.", blindspot: "Severe emotional detachment; struggles to show vulnerability.", traits: { drive: 50, social: 70, execution: -60, morality: 10 } },
+      { id: "llawliet", name: "L Lawliet", alias: "L • Greatest Detective", universe: "Death Note", category: "anime", archetype: "The Eccentric Inquisitor", quote: "I am justice.", synopsis: "You view the universe through probabilistic models, sweets, and forensic puzzles. You do not pose as a white knight—you play to win against criminals.", strengths: "Peerless deductive logic, unconventional psychological traps, razor focus.", blindspot: "Indifferent to social protocols; willing to test legal boundaries.", traits: { drive: 60, social: 90, execution: -95, morality: 20 } },
+      { id: "ironman", name: "Iron Man", alias: "Tony Stark • Armored Avenger", universe: "Marvel Comics", category: "superhero", archetype: "The Futuristic Engineer", quote: "I am Iron Man.", synopsis: "Brash, brilliant, and perpetually forging technological answers to existential problems. You mask anxiety with quick humor and decisive sacrifice.", strengths: "Inventive genius, rapid adaptation, willingness to shoulder danger.", blindspot: "Technological hubris and proactive overreach that can trigger disasters.", traits: { drive: 30, social: 20, execution: -80, morality: 10 } },
+      { id: "kakashi", name: "Kakashi Hatake", alias: "The Copy Ninja", universe: "Naruto", category: "anime", archetype: "The Chill Veteran", quote: "Those who break the rules are scum, but those who abandon their friends are worse than scum.", synopsis: "Behind a relaxed facade lies a veteran who survived endless loss and emerged as an empathetic, razor-sharp guardian of youth.", strengths: "Tactical versatility, emotional maturity, calm crisis intervention.", blindspot: "Tendency to shoulder grief in silence and conceal physical injuries.", traits: { drive: 10, social: -20, execution: -70, morality: -50 } },
+      { id: "law", name: "Trafalgar Law", alias: "Surgeon of Death", universe: "One Piece", category: "anime", archetype: "The Surgical Plotter", quote: "The weak do not have the right to choose how they die.", synopsis: "Calculating, cynical, and disciplined. You construct patient ambushes for corrupt warlords while keeping personal emotions securely guarded.", strengths: "Cold calculation, spatial awareness, quiet loyalty to those who saved him.", blindspot: "Cynicism can blind you to the spontaneous genius of companions.", traits: { drive: 60, social: 80, execution: -85, morality: 40 } },
+      { id: "drstrange", name: "Doctor Strange", alias: "Stephen Strange • Sorcerer Supreme", universe: "Marvel Comics", category: "superhero", archetype: "The Multiversal Guardian", quote: "We never lose our demons, we only learn to live above them.", synopsis: "You traded a surgeon's vanity for esoteric mastery. You make cold calculations across millions of timelines to ensure reality endures.", strengths: "Esoteric intellect, metaphysical foresight, crisis discipline.", blindspot: "Aloof superiority; keeps critical knowledge hidden from allies.", traits: { drive: 30, social: 60, execution: -90, morality: -30 } },
+
+      // 5. The Relentless Realists
+      { id: "wolverine", name: "Wolverine", alias: "Logan • Weapon X", universe: "Marvel Comics", category: "superhero", archetype: "The Feral Protector", quote: "I'm the best there is at what I do, but what I do best isn't very nice.", synopsis: "Centuries of bloodshed have hardened your exterior, but beneath the claws beats a fierce code of honor and an instinct to protect.", strengths: "Indomitable healing willpower, survival instincts, absolute loyalty.", blindspot: "Berserker rage and difficulty letting down emotional walls.", traits: { drive: 70, social: 65, execution: 75, morality: 20 } },
+      { id: "guts", name: "Guts", alias: "The Black Swordsman", universe: "Berserk", category: "anime", archetype: "The Indomitable Struggler", quote: "If you're going to worry about hurting ants beneath your feet, you won't be able to walk.", synopsis: "You spit blood in the face of fate and gods. Wielding a massive slab of iron, you survive existential horrors through willpower and love.", strengths: "Limitless pain tolerance, superhuman grit, unyielding survival instinct.", blindspot: "Inner rage that threatens to swallow your sanity.", traits: { drive: 80, social: 75, execution: 50, morality: 50 } },
+      { id: "zoro", name: "Roronoa Zoro", alias: "Pirate Hunter • Master Swordsman", universe: "One Piece", category: "anime", archetype: "The Iron Pillar", quote: "Nothing happened.", synopsis: "A man of steel discipline, few words, and infinite devotion. You would quietly absorb all of your leader's agony without uttering a complaint.", strengths: "Deadly sword mastery, unshakeable loyalty, pain tolerance.", blindspot: "Nonexistent sense of navigation and disdain for diplomatic tact.", traits: { drive: 50, social: 40, execution: 65, morality: 10 } },
+      { id: "mustang", name: "Roy Mustang", alias: "The Flame Alchemist", universe: "Fullmetal Alchemist", category: "anime", archetype: "The Flame Reformer", quote: "I want to become Führer to protect those who cannot protect themselves.", synopsis: "You navigate dangerous political halls to reform a corrupt state from the top down, shielding your subordinates from danger at every step.", strengths: "Political cunning, explosive firepower, deep devotion to subordinates.", blindspot: "Susceptible to blinding fury when his chosen team is attacked.", traits: { drive: 10, social: -30, execution: -80, morality: 10 } },
+      { id: "punisher", name: "The Punisher", alias: "Frank Castle", universe: "Marvel Comics", category: "superhero", archetype: "The Relentless Executioner", quote: "You hit 'em and they get back up. I hit 'em and they stay down.", synopsis: "Zero compromise. You wage an unending war against organized crime, dismantling predators with cold ballistic efficiency.", strengths: "Absolute determination, combat tactics mastery, immunity to intimidation.", blindspot: "Zero tolerance for moral nuance; completely closed to redemption.", traits: { drive: 95, social: 95, execution: -50, morality: 90 } },
+      { id: "spike", name: "Spike Spiegel", alias: "The Space Cowboy", universe: "Cowboy Bebop", category: "anime", archetype: "The Fluid Drifter", quote: "Whatever happens, happens.", synopsis: "You move through peril like flowing water—graceful, ironic, and detached. Beneath the relaxed demeanor is a warrior bound to past memories.", strengths: "Martial arts fluidity, improvisation under pressure, fatalistic calm.", blindspot: "Apathy and self-destructive fixation on lost memories.", traits: { drive: 75, social: 60, execution: 80, morality: 30 } },
+      { id: "gojo", name: "Satoru Gojo", alias: "The Honored One", universe: "Jujutsu Kaisen", category: "anime", archetype: "The Sovereign Apex", quote: "Throughout heaven and earth, I alone am the honored one.", synopsis: "Possessing limitless power, you conceal isolation behind jokes and irreverence. You foster youth to overturn a rotting conservative hierarchy.", strengths: "Absolute combat supremacy, magnetic charm, protective mentorship.", blindspot: "Supreme confidence can lead to overlooking calculated ambushes.", traits: { drive: 20, social: 20, execution: 30, morality: 40 } },
+
+      // 6. The Compassionate Anchors
+      { id: "nightwing", name: "Nightwing", alias: "Dick Grayson • The Acrobat", universe: "DC Comics", category: "superhero", archetype: "The Radiant Leader", quote: "You have to be willing to lead with empathy, not fear.", synopsis: "Trained in Gotham's shadows, you stepped into daylight. You are the glue holding heroes together, commanding through warmth and agility.", strengths: "Natural charisma, elite agility, supreme team cohesion.", blindspot: "Overextending yourself to heal everyone else's emotional wounds.", traits: { drive: -75, social: -90, execution: -40, morality: -85 } },
+      { id: "deku", name: "Deku", alias: "Izuku Midoriya", universe: "My Hero Academia", category: "anime", archetype: "The Analytical Martyr", quote: "I have to work harder than anyone else to make it! I'll never catch up otherwise!", synopsis: "You analyze powers obsessively, risk your own bones to rescue strangers, and cry tears of compassion even for those who fell into villainy.", strengths: "Analytical tactical depth, pure heart, extraordinary work ethic.", blindspot: "Destructive disregard for your own body and well-being.", traits: { drive: -90, social: -80, execution: -70, morality: -90 } },
+      { id: "alphonse", name: "Alphonse Elric", alias: "The Gentle Armor", universe: "Fullmetal Alchemist", category: "anime", archetype: "The Gentle Conscience", quote: "Humankind cannot gain anything without first giving something in return.", synopsis: "Housed in cold steel armor, your soul remains profoundly tender, ethical, and calm. You are the moral compass that keeps comrades grounded.", strengths: "Infinite patience, martial balance, pure philosophical integrity.", blindspot: "Vulnerability to identity crises and lingering melancholy.", traits: { drive: -85, social: -75, execution: -50, morality: -90 } },
+      { id: "flash", name: "The Flash", alias: "Barry Allen • Crimson Comet", universe: "DC Comics", category: "superhero", archetype: "The Scarlet Optimist", quote: "Life is locomotion... if you're not moving, you're not living.", synopsis: "A forensic scientist powered by lightning. You sprint into danger with kindness, using forensic logic and empathy to reform adversaries.", strengths: "Rapid cognition, optimistic warmth, heartfelt connection.", blindspot: "Temptation to rewrite history out of grief and longing.", traits: { drive: -80, social: -70, execution: -30, morality: -85 } },
+      { id: "wonderwoman", name: "Wonder Woman", alias: "Diana Prince • Princess of Themyscira", universe: "DC Comics", category: "superhero", archetype: "The Amazonian Diplomat", quote: "Only love can truly save the world.", synopsis: "Forged with divine virtue, you are an ambassador of peace who draws weapons only when dialogue has been violently closed.", strengths: "Incorruptible truth, warrior grace, inspiring authority.", blindspot: "Disillusionment when encountering modern institutional corruption.", traits: { drive: -90, social: -70, execution: -40, morality: -95 } },
+      { id: "winry", name: "Winry Rockbell", alias: "Automail Meister", universe: "Fullmetal Alchemist", category: "anime", archetype: "The Restorative Maker", quote: "Your hands aren't meant to kill. They're meant to give life!", synopsis: "You forge mechanical limbs with care and tears. You refuse to let violence poison your soul, offering healing and repair rather than retribution.", strengths: "Engineering ingenuity, emotional grounding, moral resilience.", blindspot: "Feeling helpless when brute physical conflicts erupt around you.", traits: { drive: -70, social: -75, execution: -60, morality: -80 } },
+
+      // 7. The Dark Idealists
+      { id: "light", name: "Light Yagami", alias: "Kira", universe: "Death Note", category: "anime", archetype: "The Fallen Arbiter", quote: "I am the God of the new world!", synopsis: "You began with a desire to cleanse society of crime, but absolute intellectual authority twisted into ruthless megalomania.", strengths: "Prodigious intellect, psychological deception, relentless ambition.", blindspot: "Narcissistic god complex; cannot accept someone outthinking him.", traits: { drive: -80, social: 90, execution: -95, morality: 95 } },
+      { id: "eren", name: "Eren Yeager", alias: "The Attack Titan", universe: "Attack on Titan", category: "anime", archetype: "The Devouring Liberator", quote: "If someone tries to steal my freedom, I will steal theirs first.", synopsis: "Freedom is your uncompromising faith. You will tear through armies and worlds to protect your companions from annihilation.", strengths: "Terrifying willpower, refusal to bow to fate, unstoppable momentum.", blindspot: "Catastrophic tunnel vision that annihilates diplomacy.", traits: { drive: -40, social: 60, execution: 40, morality: 90 } },
+      { id: "magneto", name: "Magneto", alias: "Erik Lehnsherr • Master of Magnetism", universe: "Marvel Comics", category: "superhero", archetype: "The Tragic Revolutionary", quote: "Never again.", synopsis: "A survivor of genocide who refuses to see his mutant family exterminated. You fight oppression with magnetic sovereignty and regal ferocity.", strengths: "Visionary nobility, charismatic conviction, protector instinct.", blindspot: "Trauma drives you toward the same supremacist methods as oppressors.", traits: { drive: -50, social: 30, execution: -70, morality: 80 } },
+      { id: "sasuke", name: "Sasuke Uchiha", alias: "The Shadow Shinobi", universe: "Naruto", category: "anime", archetype: "The Severed Avenger", quote: "I have long since closed my eyes... My only goal is in the darkness.", synopsis: "Scarred by clan slaughter, you severed attachments to attain power. Having walked through darkness, you now safeguard peace from shadows.", strengths: "Elite combat analysis, cold focus, relentless pursuit of truth.", blindspot: "Susceptibility to isolation and deep-rooted emotional distrust.", traits: { drive: 30, social: 90, execution: -40, morality: 70 } },
+      { id: "redhood", name: "Red Hood", alias: "Jason Todd", universe: "DC Comics", category: "superhero", archetype: "The Resurrected Rebel", quote: "You can't stop crime. That's what you never understood. You can only control it.", synopsis: "Reborn from the grave, you reject delicate codes. You control the criminal underworld through weapons, fear, and terminal justice.", strengths: "Streetwise pragmatism, combat brutality, intense loyalty to victims.", blindspot: "Simmering anger that turns into reckless vengeance.", traits: { drive: 60, social: 70, execution: 30, morality: 80 } },
+      { id: "vegeta", name: "Vegeta", alias: "Prince of all Saiyans", universe: "Dragon Ball", category: "anime", archetype: "The Proud Sovereign", quote: "There is only one certainty in life: a strong man stands above and conquers all!", synopsis: "Royal pride fuels your sweat and blood. Through agonizing trials, you evolved from a conqueror into a fiercely protective guardian.", strengths: "Relentless work ethic, tactical grit, hidden protective devotion.", blindspot: "Saiyan ego prevents strategic retreats or accepting assistance.", traits: { drive: 40, social: 75, execution: -20, morality: 40 } },
+
+      // 8. The Chaos Catalysts
+      { id: "deadpool", name: "Deadpool", alias: "Wade Wilson • Merc with a Mouth", universe: "Marvel Comics", category: "superhero", archetype: "The Anarchic Catalyst", quote: "Maximum effort!", synopsis: "You know reality is an absurd comedy, so why follow arbitrary rules? Pure comic madness backed by regenerative healing and katanas.", strengths: "Unpredictable improvisation, pain immunity, hidden heart of gold.", blindspot: "Masks profound self-loathing behind relentless irreverence.", traits: { drive: 80, social: 40, execution: 100, morality: 85 } },
+      { id: "joseph", name: "Joseph Joestar", alias: "JoJo • Hamon Trickster", universe: "JoJo's Bizarre Adventure", category: "anime", archetype: "The Master Trickster", quote: "Your next line is: 'How did you know?!'", synopsis: "You don't defeat ancient beings with raw muscle—you triumph with psychological feints, sleight-of-hand tricks, and dramatic retreats.", strengths: "Psychological warfare, spontaneous cunning, supreme charisma.", blindspot: "Irreverence and bravado in moments demanding solemn dignity.", traits: { drive: 50, social: -30, execution: 90, morality: 50 } },
+      { id: "edward", name: "Edward Elric", alias: "The Fullmetal Alchemist", universe: "Fullmetal Alchemist", category: "anime", archetype: "The Defiant Prodigy", quote: "Stand up and walk. Keep moving forward. You've got two good legs.", synopsis: "Fiery, brilliant, and fiercely protective. You challenge taboos and corrupt authorities to restore your brother's body with science and grit.", strengths: "Alchemical genius, explosive combat adaptability, brotherhood.", blindspot: "Short temper whenever your height or loved ones are slighted.", traits: { drive: -40, social: -30, execution: 40, morality: 40 } },
+      { id: "rocket", name: "Rocket Raccoon", alias: "Rocket • Guardian Artificer", universe: "Marvel Comics", category: "superhero", archetype: "The Scrappy Artificer", quote: "Ain't no thing like me, 'cept me!", synopsis: "Cynical and scarred by experimentation, you build hadron blasters from scraps to protect your chosen family while barking insults.", strengths: "Heavy weapons engineering, tactical improvisation, loyalty.", blindspot: "Pushes loved ones away before they can abandon him.", traits: { drive: 75, social: 45, execution: -50, morality: 60 } },
+      { id: "killua", name: "Killua Zoldyck", alias: "The Lightning Prodigy", universe: "Hunter x Hunter", category: "anime", archetype: "The Liberated Prodigy", quote: "If you ignore a friend you have the ability to help, wouldn't you be betraying him?", synopsis: "Raised in lethal darkness, you broke mental conditioning to walk beside friends as a devoted protector and lightning-fast assassin.", strengths: "Lightning reflexes, cold situational analysis, devotion to allies.", blindspot: "Lingering fear of falling back into childhood conditioning.", traits: { drive: 40, social: -20, execution: -60, morality: 20 } },
+      { id: "saitama", name: "Saitama", alias: "Caped Baldy • One Punch Man", universe: "One Punch Man", category: "anime", archetype: "The Unbothered Apex", quote: "I'm just a guy who's a hero for fun.", synopsis: "Having broken your biological limiter, you vanquish monsters with a single punch. You remain humble, seeking supermarket bargains and fun.", strengths: "Limitless strength, unaffected by vanity or slander, down-to-earth.", blindspot: "Profound boredom; disconnected from everyday challenges.", traits: { drive: 60, social: 50, execution: 85, morality: -20 } },
+      { id: "constantine", name: "John Constantine", alias: "Hellblazer • Occult Hustler", universe: "DC Comics", category: "superhero", archetype: "The Occult Hustler", quote: "I'm a nasty piece of work, ask anybody.", synopsis: "Armed with a trenchcoat, silk tongue, and dark occult bargains. You outwit demons and angels alike, leaving broken debts in your wake.", strengths: "Superhuman cunning, occult knowledge, unflinching nerve.", blindspot: "Cynical isolation; those around you often pay the spiritual price.", traits: { drive: 85, social: 80, execution: -40, morality: 90 } }
+    ];
+
+    const QUESTIONS = [
+      {
+        topic: "CRISIS TACTICS",
+        title: "The Collapsing Bridge & The Rail Car",
+        narrative: "A sabotage blast shatters a suspension bridge. On the left, an overloaded rail car carries 100 passengers toward the abyss. On the right, your trusted battle partner hangs by a frayed cord. You only have time to secure one. What is your reaction?",
+        choices: [
+          { text: "Save the 100 passengers immediately. Duty demands protecting the defenseless, even if my own heart is torn to pieces.", shifts: { drive: -15, social: -10, execution: -10, morality: -15 }, badge: "DUTY & SACRIFICE" },
+          { text: "Save my partner without hesitation. The world may judge me, but I will never abandon the comrade who bled beside me.", shifts: { drive: 30, social: 15, execution: 20, morality: 15 }, badge: "UNCONDITIONAL BOND" },
+          { text: "Reject the binary! Push my powers beyond red-line limits, fire grappling cables, and risk total burnout to save both.", shifts: { drive: -25, social: -15, execution: 30, morality: -20 }, badge: "HEROIC MIRACLE" },
+          { text: "Instant structural triage: fire a kinetic anchor into the bridge truss to lock the car while swinging to retrieve my partner.", shifts: { drive: 10, social: 10, execution: -30, morality: 0 }, badge: "TACTICAL TRIAGE" }
+        ]
+      },
+      {
+        topic: "JUSTICE & LAW",
+        title: "The Untouchable Syndicate Boss",
+        narrative: "A corrupt underworld titan buys judges, bribes councilors, and laughs at legal warrants while terrorizing the city. The legal system is paralyzed. How do you resolve this impasse?",
+        choices: [
+          { text: "Eliminate him tonight from the shadows. Vermin like that only understand iron. Second chances are for suckers.", shifts: { drive: 25, social: 25, execution: 10, morality: 30 }, badge: "LETHAL RECKONING" },
+          { text: "Work methodically outside the spotlight: gather irrefutable blackmail and financial records, dismantle his empire, and force him into a cage.", shifts: { drive: 15, social: 15, execution: -30, morality: -10 }, badge: "CHESSMASTER PLAY" },
+          { text: "Publicly challenge him and expose the rot in the legal system. If we execute him illegally, we surrender the moral authority that protects citizens.", shifts: { drive: -25, social: -20, execution: -15, morality: -25 }, badge: "SACRED PRINCIPLE" },
+          { text: "Kick the front door down right in front of his bodyguard army, smash his vault, and drag him onto live TV to ignite an uprising.", shifts: { drive: -10, social: -15, execution: 30, morality: 25 }, badge: "CHAOTIC SPECTACLE" }
+        ]
+      },
+      {
+        topic: "COMMAND & TRUST",
+        title: "The Commander's Dark Order",
+        narrative: "Your revered commander orders your squad to incinerate an infected border village to stop a bioweapon contagion from reaching the capital. You suspect there is a cure, but time is evaporating.",
+        choices: [
+          { text: "Defy the order openly! I draw my weapon against anyone attempting to harm the innocent villagers. We find that cure or die trying.", shifts: { drive: -30, social: -25, execution: 20, morality: 30 }, badge: "DEFIANT CONSCIENCE" },
+          { text: "Reluctantly comply with heavy sorrow. The survival of millions in the capital outweighs the lives of dozens. The math of war is cruel.", shifts: { drive: 30, social: 20, execution: -20, morality: -10 }, badge: "GRIM PRAGMATISM" },
+          { text: "Pretend to execute the order while secretly evacuating the villagers into deep tunnels, planting decoys to deceive headquarters.", shifts: { drive: 0, social: 10, execution: -35, morality: 15 }, badge: "SHADOW CONSPIRACY" },
+          { text: "Rally the villagers, explain the threat plainly, and lead them in an immediate scientific dash toward the lab to synthesize the antidote.", shifts: { drive: -20, social: -30, execution: -10, morality: -20 }, badge: "COMMUNAL RESOLVE" }
+        ]
+      },
+      {
+        topic: "THE ARENA OF WAR",
+        title: "Facing an Unbeatable Titan",
+        narrative: "An apocalyptic entity lands in the city plaza. Its skin deflects artillery, and its energy output is climbing exponentially. How do you step into battle?",
+        choices: [
+          { text: "Charge head-first screaming with everything I've got! Pain is just weakness leaving the body, and pure fighting spirit can shatter any wall!", shifts: { drive: -20, social: -15, execution: 35, morality: 0 }, badge: "MAXIMUM EFFORT" },
+          { text: "Observe its attack patterns, energy discharge rhythm, and blind spots from vantage points before deploying a surgically fatal strike.", shifts: { drive: 20, social: 20, execution: -35, morality: -10 }, badge: "TACTICAL DISSECTION" },
+          { text: "Form an interlocking frontline barrier with teammates, shielding civilians while pooling joint abilities into a coordinated resonance wave.", shifts: { drive: -25, social: -35, execution: -15, morality: -25 }, badge: "UNITED BASTION" },
+          { text: "Trick it! Taunt its ego, bait it into an industrial trap filled with explosives, and casually light a match while walking away.", shifts: { drive: 25, social: 15, execution: 20, morality: 25 }, badge: "AUDACIOUS TRICKSTER" }
+        ]
+      },
+      {
+        topic: "MORAL COMPASS",
+        title: "The Fallen Ally's Betrayal",
+        narrative: "Your childhood companion turns to darkness, joining the enemy after suffering personal tragedy. They are now directing attacks against your headquarters.",
+        choices: [
+          { text: "They are my family. I don't care what crimes they've committed—I will take every punch, walk through hell, and drag them back into the light.", shifts: { drive: -30, social: -30, execution: 20, morality: -15 }, badge: "UNBREAKABLE FAITH" },
+          { text: "They made their choice. Sentimentality will get soldiers killed. I will put them down quickly, giving them a warrior's clean finish.", shifts: { drive: 30, social: 30, execution: -10, morality: 15 }, badge: "COLD RESOLUTION" },
+          { text: "Investigate what broke them. Unravel the mastermind pulling their strings and strike at the puppeteer to break the curse.", shifts: { drive: -10, social: 0, execution: -30, morality: -10 }, badge: "ROOT-CAUSE INTEL" },
+          { text: "Lure them to a neutral duel. No weapons, just honest words and bloody knuckles until all the buried resentment is hammered out.", shifts: { drive: 0, social: -10, execution: 25, morality: 10 }, badge: "HONEST BRAWL" }
+        ]
+      },
+      {
+        topic: "MOTIVATION & PURPOSE",
+        title: "The Ultimate Wish",
+        narrative: "You stand before a cosmic artifact capable of granting one irreversible miracle to you alone. What do you command of the universe?",
+        choices: [
+          { text: "Eradicate war, famine, and sickness from all worlds so no child ever cries in fear again.", shifts: { drive: -35, social: -25, execution: -15, morality: -30 }, badge: "UNIVERSAL HARMONY" },
+          { text: "Give me the absolute power and knowledge to guarantee that nobody can ever dominate or hurt my circle again.", shifts: { drive: 20, social: 25, execution: -20, morality: 20 }, badge: "SOVEREIGN SHIELD" },
+          { text: "Destroy the artifact itself. Cosmic shortcuts only rob mortals of their growth and create even worse tyrants.", shifts: { drive: -10, social: 0, execution: 20, morality: -10 }, badge: "EARNED HUMANITY" },
+          { text: "Revive everyone who fell in our defense, then throw a planet-wide victory banquet with mountains of meat and drinks!", shifts: { drive: 0, social: -30, execution: 30, morality: 10 }, badge: "TRIUMPHANT COMMUNION" }
+        ]
+      },
+      {
+        topic: "COMRADESHIP",
+        title: "The Lone Wolf Dilemma",
+        narrative: "When high danger surfaces and you have to plan the execution of a lethal assignment, what is your instinctive approach?",
+        choices: [
+          { text: "I go in alone. I work faster without baggage, and if things go south, only my blood is spilled on the pavement.", shifts: { drive: 20, social: 40, execution: 0, morality: 10 }, badge: "SOLITARY VANGUARD" },
+          { text: "Assemble the squad. Everyone has unique talents that compensate for each other's weaknesses. True power is synergy.", shifts: { drive: -20, social: -40, execution: -15, morality: -20 }, badge: "COLLECTIVE HARMONY" },
+          { text: "I act as the bait or sniper while letting independent allies take secondary objectives. Synchronized, but with zero micromanagement.", shifts: { drive: 10, social: 15, execution: -25, morality: 0 }, badge: "COORDINATED INDEPENDENCE" },
+          { text: "Whoever wants to fight, fall in behind me! We make the plan on the fly and improvise when the doors blow open!", shifts: { drive: -10, social: -20, execution: 35, morality: 15 }, badge: "IMPROVISED CHARGE" }
+        ]
+      },
+      {
+        topic: "LEGACY & PHILOSOPHY",
+        title: "How You Want History to Remember You",
+        narrative: "When the dust settles and your journey draws to an end, what epitaph best captures the soul of your journey?",
+        choices: [
+          { text: "'A shield for the weak, an unyielding paragon of virtue who left the world gentler than they found it.'", shifts: { drive: -30, social: -25, execution: -15, morality: -35 }, badge: "IMMORTAL SHIELD" },
+          { text: "'A ghost who solved the impossible equations, bore the dark sins in silence, and gave others the dawn.'", shifts: { drive: 25, social: 25, execution: -30, morality: 0 }, badge: "SILENT ARCHITECT" },
+          { text: "'A wild rebel who lived completely free, laughed in death's face, and kicked open the cage of fate!'", shifts: { drive: 0, social: 10, execution: 35, morality: 35 }, badge: "UNBOUND SPIRIT" },
+          { text: "'A protector who bled alongside brothers and sisters and proved that mortal bonds conquer gods.'", shifts: { drive: -20, social: -35, execution: 10, morality: -15 }, badge: "COMRADE OF IRON" }
+        ]
+      }
+    ];
+  </script>
+
+  <script>
+    let currentQuestionIndex = 0;
+    let userTraitScores = { drive: 0, social: 0, execution: 0, morality: 0 };
+    let questionHistory = [];
+
+    // DOM References
+    const landingView = document.getElementById('landing-view');
+    const quizView = document.getElementById('quiz-view');
+    const resultsView = document.getElementById('results-view');
+    const rosterModal = document.getElementById('roster-modal');
+
+    const startBtn = document.getElementById('start-btn');
+    const retakeBtn = document.getElementById('retake-btn');
+    const prevQuestionBtn = document.getElementById('prev-question-btn');
+    const copyResultBtn = document.getElementById('copy-result-btn');
+    const openRosterBtnHero = document.getElementById('open-roster-btn-hero');
+    const openRosterBtnResults = document.getElementById('open-roster-btn-results');
+    const closeRosterBtn = document.getElementById('close-roster-btn');
+    const rosterGrid = document.getElementById('roster-grid');
+    const rosterSearch = document.getElementById('roster-search');
+    const rosterCount = document.getElementById('roster-count');
+    const previewAvatarStrip = document.getElementById('preview-avatar-strip');
+
+    const hudQuestionNumber = document.getElementById('hud-question-number');
+    const hudAxisFocus = document.getElementById('hud-axis-focus');
+    const progressPercentage = document.getElementById('progress-percentage');
+    const progressBarFill = document.getElementById('progress-bar-fill');
+    const scenarioTopic = document.getElementById('scenario-topic');
+    const scenarioTitle = document.getElementById('scenario-title');
+    const scenarioNarrative = document.getElementById('scenario-narrative');
+    const choicesContainer = document.getElementById('choices-container');
+
+    // Populate Initial Landing Preview Strip
+    function populatePreviewStrip() {
+      previewAvatarStrip.innerHTML = '';
+      CHARACTERS.slice(0, 16).forEach(c => {
+        const item = document.createElement('div');
+        item.className = "flex-shrink-0 text-center cursor-pointer group";
+        item.innerHTML = `
+          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border-3 border-black shadow-brutal-xs group-hover:-translate-y-1 transition-transform bg-white flex items-center justify-center">
+            ${getCartoonSvg(c.id, "w-full h-full")}
+          </div>
+          <span class="block text-[11px] font-black uppercase truncate w-16 sm:w-20 mt-1">${c.name}</span>
+        `;
+        item.addEventListener('click', () => {
+          playSound('pop');
+          previewSingleCharacter(c);
+        });
+        previewAvatarStrip.appendChild(item);
+      });
+    }
+
+    startBtn.addEventListener('click', () => {
+      playSound('click');
+      landingView.classList.add('hidden');
+      quizView.classList.remove('hidden');
+      resultsView.classList.add('hidden');
+      currentQuestionIndex = 0;
+      userTraitScores = { drive: 0, social: 0, execution: 0, morality: 0 };
+      questionHistory = [];
+      loadQuestion(0);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    retakeBtn.addEventListener('click', () => {
+      playSound('click');
+      resultsView.classList.add('hidden');
+      quizView.classList.remove('hidden');
+      currentQuestionIndex = 0;
+      userTraitScores = { drive: 0, social: 0, execution: 0, morality: 0 };
+      questionHistory = [];
+      loadQuestion(0);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    prevQuestionBtn.addEventListener('click', () => {
+      playSound('click');
+      if (currentQuestionIndex > 0) {
+        const lastShift = questionHistory.pop();
+        if (lastShift) {
+          userTraitScores.drive -= lastShift.drive;
+          userTraitScores.social -= lastShift.social;
+          userTraitScores.execution -= lastShift.execution;
+          userTraitScores.morality -= lastShift.morality;
+        }
+        currentQuestionIndex--;
+        loadQuestion(currentQuestionIndex);
+      }
+    });
+
+    openRosterBtnHero.addEventListener('click', () => { playSound('pop'); openRoster(); });
+    openRosterBtnResults.addEventListener('click', () => { playSound('pop'); openRoster(); });
+    closeRosterBtn.addEventListener('click', () => { playSound('click'); closeRoster(); });
+
+    rosterModal.addEventListener('click', (e) => {
+      if (e.target === rosterModal) closeRoster();
+    });
+
+    function loadQuestion(index) {
+      const q = QUESTIONS[index];
+      hudQuestionNumber.textContent = index + 1;
+      hudAxisFocus.textContent = `CRUCIBLE: ${q.topic}`;
+      
+      const pct = Math.round(((index) / QUESTIONS.length) * 100);
+      progressPercentage.textContent = `${pct}%`;
+      progressBarFill.style.width = `${Math.max(12.5, pct)}%`;
+
+      scenarioTopic.textContent = q.topic;
+      scenarioTitle.textContent = q.title;
+      scenarioNarrative.textContent = q.narrative;
+
+      prevQuestionBtn.disabled = index === 0;
+
+      // Render Options
+      choicesContainer.innerHTML = '';
+      q.choices.forEach((choice, cIdx) => {
+        const btn = document.createElement('button');
+        btn.className = "w-full text-left brutal-btn bg-white hover:bg-comicYellow/30 p-4 rounded-xl transition-all flex flex-col md:flex-row md:items-center justify-between gap-3 group";
+        
+        btn.innerHTML = `
+          <div class="flex items-start gap-3">
+            <span class="w-8 h-8 rounded-lg bg-black text-white font-comic text-xl flex items-center justify-center flex-shrink-0 group-hover:bg-comicPink group-hover:text-white transition-colors">
+              ${['A','B','C','D'][cIdx]}
+            </span>
+            <span class="font-bold text-base text-neutral-900 group-hover:text-black leading-snug">
+              ${choice.text}
+            </span>
+          </div>
+          <span class="self-end md:self-center px-2.5 py-1 bg-neutral-100 border border-black font-black text-xs uppercase tracking-wider rounded group-hover:bg-comicGreen group-hover:text-black">
+            ${choice.badge}
+          </span>
+        `;
+
+        btn.addEventListener('click', () => {
+          playSound('click');
+          handleChoiceSelect(choice.shifts);
+        });
+        choicesContainer.appendChild(btn);
+      });
+    }
+
+    function handleChoiceSelect(shifts) {
+      questionHistory.push(shifts);
+
+      userTraitScores.drive += shifts.drive;
+      userTraitScores.social += shifts.social;
+      userTraitScores.execution += shifts.execution;
+      userTraitScores.morality += shifts.morality;
+
+      currentQuestionIndex++;
+      if (currentQuestionIndex < QUESTIONS.length) {
+        loadQuestion(currentQuestionIndex);
+      } else {
+        playSound('fanfare');
+        showResults();
+      }
+    }
+
+    function showResults() {
+      quizView.classList.add('hidden');
+      resultsView.classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Clamp normalized user coordinates
+      const clamp = (val) => Math.max(-100, Math.min(100, val));
+      const normalizedUser = {
+        drive: clamp(userTraitScores.drive),
+        social: clamp(userTraitScores.social),
+        execution: clamp(userTraitScores.execution),
+        morality: clamp(userTraitScores.morality)
+      };
+
+      // 4D Euclidean space calculation
+      const scored = CHARACTERS.map(char => {
+        const dDrive = normalizedUser.drive - char.traits.drive;
+        const dSocial = normalizedUser.social - char.traits.social;
+        const dExecution = normalizedUser.execution - char.traits.execution;
+        const dMorality = normalizedUser.morality - char.traits.morality;
+
+        const distance = Math.sqrt(
+          Math.pow(dDrive, 2) +
+          Math.pow(dSocial, 2) +
+          Math.pow(dExecution, 2) +
+          Math.pow(dMorality, 2)
+        );
+
+        const maxDist = 400; // sqrt(4 * 200^2)
+        const similarity = Math.max(65, Math.round(100 - (distance / maxDist) * 100));
+
+        return {
+          character: char,
+          distance: distance,
+          similarity: similarity
+        };
+      });
+
+      scored.sort((a, b) => a.distance - b.distance);
+
+      const best = scored[0].character;
+      const bestScore = scored[0].similarity;
+      const runnerUp1 = scored[1].character;
+      const runnerUp1Score = scored[1].similarity;
+      const runnerUp2 = scored[2].character;
+      const runnerUp2Score = scored[2].similarity;
+      const foil = scored[scored.length - 1].character;
+
+      // Populate Best Match DOM
+      document.getElementById('match-percentage').textContent = `${bestScore}%`;
+      document.getElementById('char-name').textContent = best.name;
+      document.getElementById('char-alias').textContent = `${best.alias} • ${best.universe}`;
+      document.getElementById('char-universe').textContent = best.universe;
+      document.getElementById('char-archetype').textContent = best.archetype;
+      
+      // Inject Handcrafted Cartoon SVG
+      document.getElementById('char-cartoon-frame').innerHTML = getCartoonSvg(best.id, "w-full h-full max-h-72 sm:max-h-80");
+
+      document.getElementById('char-quote').textContent = `"${best.quote}"`;
+      document.getElementById('char-synopsis').textContent = best.synopsis;
+      document.getElementById('char-strengths').textContent = best.strengths;
+      document.getElementById('char-blindspot').textContent = best.blindspot;
+
+      // Trait Badges
+      const traitTags = document.getElementById('char-trait-tags');
+      traitTags.innerHTML = `
+        <span class="px-2.5 py-0.5 bg-comicYellow border border-black font-black text-xs rounded">${best.traits.drive < 0 ? 'IDEALIST' : 'REALIST'}</span>
+        <span class="px-2.5 py-0.5 bg-comicPink text-white border border-black font-black text-xs rounded">${best.traits.social < 0 ? 'EMPATH' : 'MAVERICK'}</span>
+        <span class="px-2.5 py-0.5 bg-comicCyan border border-black font-black text-xs rounded">${best.traits.execution < 0 ? 'STRATEGIST' : 'INSTINCT'}</span>
+        <span class="px-2.5 py-0.5 bg-comicGreen border border-black font-black text-xs rounded">${best.traits.morality < 0 ? 'PARAGON' : 'REBEL'}</span>
+      `;
+
+      // Render 4-Axis Bars
+      renderAxisMeters(normalizedUser);
+
+      // Allies & Foil
+      document.getElementById('runnerup-1-name').textContent = runnerUp1.name;
+      document.getElementById('runnerup-1-universe').textContent = runnerUp1.universe;
+      document.getElementById('runnerup-1-frame').innerHTML = getCartoonSvg(runnerUp1.id, "w-full h-full");
+      document.getElementById('runnerup-1-score').textContent = `${runnerUp1Score}%`;
+      document.getElementById('runnerup-1-desc').textContent = `${runnerUp1.archetype}: Mirrors your strategic mindset and core ethical framework.`;
+
+      document.getElementById('runnerup-2-name').textContent = runnerUp2.name;
+      document.getElementById('runnerup-2-universe').textContent = runnerUp2.universe;
+      document.getElementById('runnerup-2-frame').innerHTML = getCartoonSvg(runnerUp2.id, "w-full h-full");
+      document.getElementById('runnerup-2-score').textContent = `${runnerUp2Score}%`;
+      document.getElementById('runnerup-2-desc').textContent = `${runnerUp2.archetype}: Harmonizes with your balance of duty and intuitive execution.`;
+
+      document.getElementById('foil-name').textContent = foil.name;
+      document.getElementById('foil-universe').textContent = foil.universe;
+      document.getElementById('foil-frame').innerHTML = getCartoonSvg(foil.id, "w-full h-full");
+      document.getElementById('foil-desc').textContent = `${foil.archetype}: Stands as your diametric psychological anti-pole across every crisis metric.`;
+
+      // Cache for clipboard sharing
+      window.lastResultSummary = {
+        name: best.name,
+        universe: best.universe,
+        archetype: best.archetype,
+        match: bestScore,
+        quote: best.quote
+      };
+    }
+
+    function renderAxisMeters(userCoords) {
+      const container = document.getElementById('axis-meters-container');
+      
+      const axes = [
+        { name: "DRIVE", leftLabel: "IDEALIST (Duty)", rightLabel: "REALIST (Survival)", value: userCoords.drive, leftColor: "bg-comicYellow", rightColor: "bg-comicOrange" },
+        { name: "SOCIAL ENGAGEMENT", leftLabel: "EMPATH (Community)", rightLabel: "MAVERICK (Autonomy)", value: userCoords.social, leftColor: "bg-comicGreen", rightColor: "bg-comicPink" },
+        { name: "EXECUTION PATTERN", leftLabel: "STRATEGIST (Method)", rightLabel: "INSTINCTIVE (Impulse)", value: userCoords.execution, leftColor: "bg-comicCyan", rightColor: "bg-comicPurple" },
+        { name: "MORAL ALIGNMENT", leftLabel: "PARAGON (Preserver)", rightLabel: "REBEL (Disruptor)", value: userCoords.morality, leftColor: "bg-comicGreen", rightColor: "bg-red-500" }
+      ];
+
+      container.innerHTML = axes.map(axis => {
+        const rightPct = Math.round(((axis.value + 100) / 200) * 100);
+        const leftPct = 100 - rightPct;
+
+        return `
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs font-black uppercase">
+              <span class="${leftPct >= 50 ? 'text-black underline decoration-comicPink font-black' : 'text-neutral-500'}">${axis.leftLabel} (${leftPct}%)</span>
+              <span class="${rightPct > 50 ? 'text-black underline decoration-comicPink font-black' : 'text-neutral-500'}">(${rightPct}%) ${axis.rightLabel}</span>
+            </div>
+            <div class="h-4 bg-neutral-200 border-2 border-black rounded-lg overflow-hidden flex">
+              <div style="width: ${leftPct}%" class="${axis.leftColor} h-full border-r border-black transition-all duration-300"></div>
+              <div style="width: ${rightPct}%" class="${axis.rightColor} h-full transition-all duration-300"></div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function openRoster() {
+      rosterModal.classList.remove('hidden');
+      renderRosterGrid(CHARACTERS);
+    }
+
+    function closeRoster() {
+      rosterModal.classList.add('hidden');
+    }
+
+    function previewSingleCharacter(c) {
+      document.getElementById('match-percentage').textContent = `INSPECT`;
+      document.getElementById('char-name').textContent = c.name;
+      document.getElementById('char-alias').textContent = `${c.alias} • ${c.universe}`;
+      document.getElementById('char-universe').textContent = c.universe;
+      document.getElementById('char-archetype').textContent = c.archetype;
+      
+      document.getElementById('char-cartoon-frame').innerHTML = getCartoonSvg(c.id, "w-full h-full max-h-72 sm:max-h-80");
+
+      document.getElementById('char-quote').textContent = `"${c.quote}"`;
+      document.getElementById('char-synopsis').textContent = c.synopsis;
+      document.getElementById('char-strengths').textContent = c.strengths;
+      document.getElementById('char-blindspot').textContent = c.blindspot;
+
+      const traitTags = document.getElementById('char-trait-tags');
+      traitTags.innerHTML = `
+        <span class="px-2.5 py-0.5 bg-comicYellow border border-black font-black text-xs rounded">${c.traits.drive < 0 ? 'IDEALIST' : 'REALIST'}</span>
+        <span class="px-2.5 py-0.5 bg-comicPink text-white border border-black font-black text-xs rounded">${c.traits.social < 0 ? 'EMPATH' : 'MAVERICK'}</span>
+        <span class="px-2.5 py-0.5 bg-comicCyan border border-black font-black text-xs rounded">${c.traits.execution < 0 ? 'STRATEGIST' : 'INSTINCT'}</span>
+        <span class="px-2.5 py-0.5 bg-comicGreen border border-black font-black text-xs rounded">${c.traits.morality < 0 ? 'PARAGON' : 'REBEL'}</span>
+      `;
+
+      renderAxisMeters(c.traits);
+
+      landingView.classList.add('hidden');
+      quizView.classList.add('hidden');
+      resultsView.classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderRosterGrid(list) {
+      rosterCount.textContent = list.length;
+      rosterGrid.innerHTML = '';
+
+      if (list.length === 0) {
+        rosterGrid.innerHTML = `
+          <div class="col-span-full text-center py-12">
+            <span class="font-comic text-4xl text-neutral-400">NO HEROES MATCHED</span>
+            <p class="text-sm font-bold text-neutral-600 mt-2">Adjust your query or category filter.</p>
+          </div>
+        `;
+        return;
+      }
+
+      list.forEach(c => {
+        const card = document.createElement('div');
+        card.className = "brutal-card bg-white p-3.5 rounded-xl flex flex-col justify-between hover:bg-comicYellow/20 transition-all cursor-pointer";
+        
+        card.innerHTML = `
+          <div>
+            <div class="cartoon-container rounded-lg h-36 mb-3 relative">
+              ${getCartoonSvg(c.id, "w-full h-full")}
+              <span class="absolute bottom-1 left-1 text-[9px] font-black uppercase px-1.5 py-0.5 bg-black text-white rounded">${c.universe}</span>
+            </div>
+            <div class="flex items-center justify-between gap-1 mb-1">
+              <span class="text-[10px] font-black uppercase px-2 py-0.5 bg-comicCyan border border-black rounded truncate">${c.archetype}</span>
+            </div>
+            <h4 class="font-comic text-2xl text-black leading-none">${c.name}</h4>
+            <p class="text-xs font-bold text-neutral-500 truncate mt-0.5">${c.alias}</p>
+          </div>
+
+          <div class="mt-3 pt-2.5 border-t-2 border-black flex flex-wrap gap-1">
+            <span class="text-[9px] font-black px-1.5 py-0.5 bg-neutral-100 border border-black rounded">
+              ${c.traits.drive < 0 ? 'Idealist' : 'Realist'}
+            </span>
+            <span class="text-[9px] font-black px-1.5 py-0.5 bg-neutral-100 border border-black rounded">
+              ${c.traits.social < 0 ? 'Empath' : 'Maverick'}
+            </span>
+            <span class="text-[9px] font-black px-1.5 py-0.5 bg-neutral-100 border border-black rounded">
+              ${c.traits.execution < 0 ? 'Strategist' : 'Instinct'}
+            </span>
+            <span class="text-[9px] font-black px-1.5 py-0.5 bg-neutral-100 border border-black rounded">
+              ${c.traits.morality < 0 ? 'Paragon' : 'Rebel'}
+            </span>
+          </div>
+        `;
+
+        card.addEventListener('click', () => {
+          playSound('pop');
+          closeRoster();
+          previewSingleCharacter(c);
+        });
+
+        rosterGrid.appendChild(card);
+      });
+    }
+
+    // Search and Category Filter Logic
+    let currentFilter = 'all';
+    rosterSearch.addEventListener('input', applyRosterFilters);
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        playSound('click');
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-comicYellow', 'shadow-brutal-xs');
+          b.classList.add('bg-white');
+        });
+        btn.classList.remove('bg-white');
+        btn.classList.add('bg-comicYellow', 'shadow-brutal-xs');
+        currentFilter = btn.dataset.filter;
+        applyRosterFilters();
+      });
+    });
+
+    function applyRosterFilters() {
+      const q = rosterSearch.value.trim().toLowerCase();
+      
+      const filtered = CHARACTERS.filter(c => {
+        const matchesQuery = 
+          c.name.toLowerCase().includes(q) ||
+          c.alias.toLowerCase().includes(q) ||
+          c.universe.toLowerCase().includes(q) ||
+          c.archetype.toLowerCase().includes(q);
+
+        if (!matchesQuery) return false;
+
+        if (currentFilter === 'anime') return c.category === 'anime';
+        if (currentFilter === 'superhero') return c.category === 'superhero';
+        if (currentFilter === 'idealist') return c.traits.drive < 0;
+        if (currentFilter === 'rebel') return c.traits.morality > 0;
+        return true;
+      });
+
+      renderRosterGrid(filtered);
+    }
+
+    copyResultBtn.addEventListener('click', () => {
+      playSound('pop');
+      const res = window.lastResultSummary || {
+        name: "Batman",
+        universe: "DC Comics",
+        archetype: "The Tactical Architect",
+        match: "98%",
+        quote: "It's not who I am underneath, but what I do that defines me."
+      };
+
+      const shareText = `⚡ MULTIVERSE PSYCHOMETRIC TEST ⚡\n` +
+        `Matched Archetype: ${res.name} (${res.universe})\n` +
+        `Title: ${res.archetype}\n` +
+        `Resonance: ${res.match} Compatibility\n` +
+        `Motto: "${res.quote}"\n\n` +
+        `Discover your cartoon soulmate in the 50-Character Multiverse Assessment!`;
+
+      try {
+        const tempTextarea = document.createElement('textarea');
+        tempTextarea.value = shareText;
+        tempTextarea.style.position = 'fixed';
+        tempTextarea.style.opacity = '0';
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempTextarea);
+        showToast('Dossier copied to clipboard!');
+      } catch (err) {
+        showToast('Profile ready for sharing!');
+      }
+    });
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-message').textContent = msg;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 2500);
+    }
+
+    // Initialize on load
+    window.addEventListener('DOMContentLoaded', () => {
+      populatePreviewStrip();
+    });
+  </script>
+</body>
+</html>
